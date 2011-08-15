@@ -193,12 +193,12 @@ footer {
 	padding:20px 0 15px;
 	background: #fff;
 	color:#333;
-	font-size:93%;
+	font-size:97%;
 	position:fixed;
 	width:100%;
 	z-index:500;
 	bottom:0;
-	height:35px;
+	height:50px;
 }
 footer a {
 	color:#333;
@@ -212,8 +212,14 @@ footer .wrapper {
 	margin:0 auto;
 }
 footer p {
-	margin:0;
-	padding:5px 0 0;
+	/*margin:0;
+	padding:5px 0 0;*/
+	margin-bottom:25px;
+	padding-bottom:15px;
+        margin-left:410px;
+}
+footer p.alter {
+	
 }
 .topfade {
 	background:url("../img/top_bg.png") repeat-x scroll 0 0 transparent;
