@@ -1,0 +1,227 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+body {	
+	font-family:Helvetica,Arial,Verdana,sans-serif;
+	font-size: 16px;
+	background:#949494;
+}
+a {
+	text-decoration: none;
+	color: white;	
+}
+
+a:hover {
+	color: #808080;
+}
+#bg {
+	margin: 150px auto;
+	width:600px;		
+}
+#menu {
+	margin: 0 auto;
+	width:598px;	
+	height:80px;
+	line-height:80px;
+	font-weight:bold;
+	background:url(menu.jpg);
+}
+#menu ul li {
+	list-style-type:none;
+	float:left;	
+	padding-left:55px;
+}
+#menu ul li a {
+	display:block;
+}
+#content {
+	margin: 0 auto;
+	width:598px;	
+	background-color:#1c6082;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+#content div.home{
+	width:598px;
+	height:420px;
+}
+#content div.home img {
+	width:250px;
+	border:6px dotted orange;
+	height:300px;
+	margin:50px 150px;
+	margin-bottom:20px;
+}
+#content div.home p {
+	color:white;
+	font-weight:bold;
+	margin-left:200px;
+}
+#content div.about {
+	background:url(bg-about.jpg) no-repeat left top;	
+	width:598px;
+	height:300px;
+	font-size:14px;
+	color:#1d6487;
+	font-weight:bold;
+	font-family:"华文舒体";
+}
+#content div.about p {
+	padding:70px;
+	padding-left:80px;
+	line-height:180%;
+}
+#content div.folio {	
+	color:white;
+	text-align:justify;
+	line-height:180%;
+	font-size:12px;
+	color:#FFFFFF;
+	margin:30px;	
+	font-family:"宋体";
+}
+#content div.folio h1{
+	letter-spacing:-0.5px;
+	font-size:2.4em;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+#content div.folio p a {
+	color:#FF7200;
+	font-style:italic;
+}
+#content div.folio p span{
+	color:#FF7200;
+	font-family:Arial,Helvetica,sans-serif;
+	letter-spacing:0.5px;
+	font-variant:small-caps;
+}
+#content div.social {
+	color:pink;
+	line-height:50px;
+	font-size:16px;
+}
+#content div.social h1 {
+	margin:15px;	
+}
+#content div.social ul li.skyping ,li.talking,li.abouting,li.bloging,li.gmailing{
+	list-style-type:none;
+	padding-left:30px;
+	margin-left:50px;
+	display:block;	
+}
+#content div.social ul li.skyping {	
+	background:url(skype.png) no-repeat left center;
+	width:100px;
+}
+#content div.social ul li.talking {		
+	background:url(g-talk.jpg) no-repeat left center;
+	width:150px;
+}
+#content div.social ul li.abouting {	
+	background:url(aboutme.jpg) no-repeat left center;	
+}
+#content div.social ul li.bloging {	
+	background:url(bloger.jpg) no-repeat left center;	
+}
+#content div.social ul li.gmailing {	
+	background:url(gmail.jpg) no-repeat left center;	
+}
+#content div.contact {	
+	color:orange;
+	text-align:justify;
+	line-height:180%;
+	font-size:14px;
+	letter-spacing:0.5px;
+	margin:30px;
+	width:538px;
+	height:400px;
+	border:2px solid gold;
+}
+#content div.contact h1 {
+	margin:10px;
+}
+#content div.contact form {
+	display:block;
+	float:left;
+}
+#content div.contact iframe {
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+#content div.contact p {
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+/*#content div.contact form fieldset {	
+	margin:0 0 10px 0;
+	padding:5px;
+	border:2px solid gold;
+	width:530px;
+	height:50px;
+}
+#content div.contact form fieldset legend {
+	margin:0;
+	padding:10px;
+	border: 2px solid white;
+	font-size:16px;
+	font-weight:bold;
+}
+#content div.contact div.righter {	
+	float:left;	
+}
+#content div.contact div.righter iframe {
+	width:290px;
+	height:190px;	
+}
+#content div.contact div.righter p {
+	
+}*/
+input.name,input.email,input.subject  {
+    border: 1px solid #E4E4E4;
+    margin: 3px 0 6px 10px;
+    padding: 3px 2px;
+    vertical-align: middle;
+    width: 200px;
+}
+textarea.msg {
+    margin: 0;
+    width: 200px;
+    border: 1px solid #E4E4E4;
+    font-family: Arial,Verdana,tahoma;
+    font-size: 12px;
+    margin: 0 8px 4px 10px;
+    padding: 3px 2px;
+    vertical-align: top;    
+}
+input.btn1,input.btn2 {
+    background-color: #CCCCCC;
+    border: 0 none;
+    color: #000000 !important;
+    cursor: pointer;   
+    height: 30px;
+    margin-top: 10px; 
+	margin-left: 10px; 
+    width: 60px;	
+	font-size:12px;
+	font-weight:bold;	
+}
+#footer {
+	margin: 0 auto;
+	width:598px;	
+	height:50px;
+	line-height:25px;
+	text-align:center;
+	background:url(footer.jpg);
+	color:#fff;
+	font-size:14px;	
+}
+.panelwrappers {
+	overflow:hidden;
+}
+
