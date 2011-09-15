@@ -1,0 +1,219 @@
+su - 切换管理员，普通用户用$表示,管理员用#表示
+su   用户名 ------切换用户
+ifconfig -a  ---查询网卡信息
+
+启动网卡 ifconfig plumb
+禁用网卡 ifconfig unplumb
+
+svcadm enable telnet 开启talnet服务
+svcadm enable ssh  开启ssh服务
+svcadm restart net  network/ssh  重启ssh
+refresh ssh  刷新ssh
+
+
+
+启动图形界面
+/usr/dt/bin/dtlogin-daemon
+exit或
+/etc/rc.d/sqzdtlogin start
+exit
+
+
+
+命令---参数、路径
+
+pwd 显示你在那个目录
+clear  清屏
+
+
+路径：分两种 1.绝对路径: 完整的路径路径信息，参考点是根，起始位都是根  
+             2.相对路径: 我要操作的目标在我操作的文件夹下，操作此文件时不需要写全目录
+
+
+
+cd 切换工作目录
+格式：cd 目录
+      cd ..转到当前目录的父目录
+      cd / 转到根目录
+
+
+
+mkdir 创建目录
+
+格式：mkdir 文件名
+比如 mkdir aa
+     mkdir -p 5/8/1/ 创建多级目录
+rmdir 删除空目录
+格式 ：rmdir 文件名
+
+ 例子：rmdir -p 1/71/74 删除74时发现上层目录是空的，也被删掉
+      
+
+
+ls  列出指定目录的文件名
+ 格式：ls 文件名 
+ls -a  显示所有的文件
+   -R  列出包含子目录下的所有文件
+   -F  加上文件类型的指定符号
+   -L 以长文件名的的格式显示目录 
+      d ：普通目录 l:连接或快捷方式
+       r  读  w写 x 执行 -禁止  
+       前三列 文件的拥有者 第二个三列拥有组  其他人
+    -t 按文件生成日期排序
+  例子  ls -la  多个参数可以连起来写
+
+
+
+touch 修改文件的访问时间，但是你修改的文件是不存在的，就自动创建一个文件。
+
+
+rm  删除目录或文件 
+    -f 掠过删除文件不显示任何信息
+    -i 显示天显示提示信息
+    -r 同事删除目录下的所有的东西
+   
+
+
+cat more  less  head  tail  显示文件内容的信息
+    cat 41.txt 读取41文件的内容。
+  
+
+
+
+
+
+cp复制  mv剪切
+   -i 如果出现重名，提示是否覆盖
+   -r 复制整个目录
+   -p 按原文件日期进行拷贝
+   eg：cp /etc/inittab(源目录) liu/123(目的目录)。
+
+
+
+du		查看目录所占磁碟容量
+       命令格式: du [-sk] directory
+       例子 :
+              du dir1     显示目录 dir1 的总容量及其次目录的容量
+              du -sk dir1 显示目录 dir1 的总容量,以k bytes为计量
+
+
+
+
+find	文件查找   
+       命令格式: find dir -name filename command
+       -name 表示文件名
+       -user 选取该用户名的文件
+       -group 组名
+       -usefn 相当于根
+       例子:find . -name hello -print         寻找目前目录及所有的子目录内叫hello的文档.
+             find . -ctime +7 -print   找出七天内未被更动的文档
+              find . -size +2000m -print   找出大小超过2000 bytes的文档
+              find /tmp -user b1234567 -print    在/tmp下属於b1234567的文档
+              find . -name '*.c' -exec rm {}     删除所有的.c档
+              find . -name test\* -print         显示当前目录及其子目录文件名前4
+                                                 位为test的文件名
+
+
+
+命令格式：ln [-s] oldname newname  
+                 ln [-n]
+       同一文档，可拥有一个以上之名称，可将文档做数个连结.
+       一个符号链是指向系统另一个文件的特殊文件，当访问这种文件时，它里面存放着  
+       一个路径名，该路径名用来引导用户到卡符号链所指的文件或目录
+       例子 ：
+       ln  -s file1  file2  　　将名称 file2，连结至文档 file1.
+
+
+
+
+   grep    搜索字符串
+              命令格式: 
+          grep string filename
+       寻找字串的方法很多，比如说我想找所有以M开头的行.此时必须引进pattern的观
+        念.以下是一些简单的□例，以及说明：
+         - i：不分大小写。
+         - v：不包含指定模式的行。
+　　　　 -  l ：只给出包含给定模式的文件列表。
+　　　　-ｎ：文件中符合指定模式的每一行前面都加上该行在文件中的相对行号。
+　　　　　
+        ^M          以M开头的行，^表示开始的意思
+        M$          以M结尾的行，$表示结束的意思
+        ^[0-9]      以数字开始的行，[]内可列举字母
+        ^[124ab]    以1,2,4,a,或b开头的行
+        ^b.503      句点表示任一字母
+        *           星号表示0个以上的字母(可以没有)
+        +           加号表示1个以上的字母
+        \.          斜线可以去掉特殊意义
+    eg：cat passwd | grep ^b  列出大学部有申请帐号者名单
+        cat passwd | grep ^s  列出交换学生申请帐号者名单
+        cat passwd | grep '^b.503' 列出电机系各年级...
+        grep '^\.' myfile.txt   列出所有以句点开头的行
+
+
+
+
+comm，diff 比较两个文件/目录的不同之处
+cmp       比较两个文档的相同部分
+
+      
+            
+
+file 文件名  查看文件名
+
+ 
+
+wc 统计文件名的 -l（行数）    -w（字数）  -c（字符数）
+
+
+
+man 帮助信息
+man mkdir 显示mkdir的帮助信息
+
+
+
+用户管理
+useradd 创建用户   usermod 修改目录 userdel 删除目录
+       -u 指定用户id号
+       -g 指定所见组
+       -d 指定目录
+       -s 指定用户shell
+       -c 用户的注释
+       -m 建立用户目录
+
+ eg：useradd -u 1024 -d /export/home/mpf -m -g dba -c mpf
+
+
+
+finger 用户名（查看用户属性）
+
+
+
+passwd 用户名 口令 
+-s 报告口令状态
+-l 锁定口令，禁用账号
+-n 设置两次修改
+
+
+chown 修改文件的用户拥有者
+chown 用户名  文件名
+chgrp修改文件的组拥有者
+
+
+
+chmod 修改文件权限
+权限：r：100(4)  w：010(2)  x：001(1)
+参数 u（user拥有者）g（group组）o（other其他）a（all所有人）。
+eg：chmod u+x，g+wx，o+wx  文件名 
+    chmod a-x 文件名
+    chmod 777 文件名
+    
+
+
+系统信息
+whoami 用户名 显示当前终端上的使用用户
+who 、w 当前那些人正在你的计算机上的使用信息（时间、ip、操作）   
+
+
+踢掉与自己计算机连线的用户  ps -ef  查出id号
+                            kill -9 1878
+                 -9 表示强行中断一个进程            

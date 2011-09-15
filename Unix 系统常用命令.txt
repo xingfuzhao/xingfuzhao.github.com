@@ -1,0 +1,281 @@
+(一)	Ｕnix文件系统初步介绍：
+Unix OS基本是由一个核心（kernel）再加上各个大小功能不同的程序和文档组成，UNIX的整个文件系统是长在”root”之下，”root”是一般的说法，就路径的表示法，是“/”（这跟DOS）不同的是，DOS的根路径是用”\”表示。
+
+下面是比较重要的目录：
+/bin　binary的缩写，为与旧系统兼容，bin为指向/usr/bin的连接
+/dev   device的缩写，包含了UNIX的设备文件
+/etc    etcetera的缩写，包含了系统管理所需的文档和目录，
+/home　一般规划用于使用者的家目录
+/lib    library的缩写，和/bin一样，已经挪至/usr/lib,此处是一个link
+/losts+found 这个目录为空，但当系统故障，如停电造成非正常关机，当重新启动机器时，有些无法归属的文档放于此处
+/tmp   temporary的缩写，用于放置临时文件，系统开机自动清除
+/var    various 缩写
+/var/adm  系统信息及统计数据
+/var/spool　文件打印及mail
+/var/tmp   与/tmp类似，公用临时区，但不自动清除，需系统管理员维护
+/usr     user的缩写
+/usr/bin  存放大多数指令
+/usr/include 头文件
+/usr/lib   库函数
+/usr/ucb  BSD系列的指令
+usr/man  UNIX命令手册
+(二)	Unix 系统常用命令
+A.	基本命令
+1.ls		显示文件名，等同于dos下dir命令
+命令格式：ls  [option]   file or directory(s)
+              option：
+                -l  显示详细列表
+					域1 ：文件类型和文件权限
+        				a.文件访问权限
+      					mode :  rwx   rwx    rwx   r:read   w:write   x:execute
+              			user  group  other
+      					缩写 :  (u)    (g)     (o)
+    						b.文件类型
+-	: 普通文件
+b    :  块特殊文件，如硬盘和CDROM设备
+c    :  字符文件设备或称“raw”设备文件
+l     :  符号连接
+p    :  管道或流，用于进程通讯
+d    :   目录
+
+					域2 ：文件连接数
+					域3 ：文件所有者名字
+					域4 ：文件用户组名字
+					域5 ：文件长度
+					域6-8 ：最近修改日期
+					域9 ：文件名
+                -a  显示所有文件，包含隐藏文件（以. 起头的文件名）
+                -R  显示文件及所有子目录
+                -F  显示文件（后跟*）和目录（后跟/）
+                -d  与l选项合用，显示目录名而非其内容
+2.cd		目录转换，等同于dos下cd命令
+		注意目录分隔符为“/”，与dos相反
+		命令格式：cd  dirname
+3.pwd		显示当前所在路径
+	4.cat		显示文件内容,等同于dos下type命令
+              命令格式：cat  filename
+5.more	以分页方式查看文件内容.
+命令格式：more filename
+b	前翻一屏
+space	后翻一屏
+enter	显示下一行
+/string	查找string             
+6.rm		删除文件
+		命令格式： rm filename  (filename 可为档名，或档名缩写符号.)
+				    rm  -r directory(s) 删除目录
+					 -i 无论删除文件还是目录，都需用户确认	
+		例子 ：
+			rm  file1   删除档名为 file1 之文档.
+			rm  file?   删除档名中有五个字符，前四个字符为file 之所有文档.
+			rm  f*      删除档名中，以 f 为字首的所有文档.
+			rm -r dir1  删除目录 dir1，及其下所有文档及子目录.
+7.mkdir	创建目录
+		命令格式： mkdir [-p] directory-name
+       例子：
+              mkdir dir1      建立一新目录 dir1.
+              mkdir -p dir/subdir 直接创建多级目录
+8.rmdir	删除目录(常用rm –r directory(s)代替此命令)
+                 目录必须首先为空
+         命令格式: rmdir directory
+9.cp		文档复制
+       命令格式: cp [-r] source destination
+       例子:
+              cp file1 file2  将文档 file1 复制成 file2
+              cp file1 dir1   将文档 file1 复制到目录 dir1 下，文件名仍为 file1.
+              cp /tmp/file1 ./ 将目录 /tmp 下的文档 file1复制到现行目录下，
+                              档名仍为 file1.
+              cp /tmp/file1 file2 将目录 /tmp 下的文档 file1现行目录下，档名
+                                  为file2
+              cp -r dir1 dir2   (recursive copy) 复制整个目录.
+                    若目录 dir2 存在，则将目录dir1，及其所有文档和子目录，
+                    复制到目录 dir2 下，新目录名称为dir1.若目录dir2不存在，
+                    则将dir1，及其所有文档和子目录，复制为目录 dir2.
+
+	10.mv		文件移动   
+       命令格式： mv source destination
+       例子:
+			  mv file1 file2  将文档 file1，更改档名为 file2.
+               mv file1 dir1   将文档 file1，移到目录 dir1 下，档名仍为 file1.
+               mv dir1  dir2   若目录 dir2 存在，则将目录  dir1，及其所有档
+                              案和子目录，移到目录 dir2 下，新目录名称为 dir1.
+                              若目录 dir2 不存在，则将dir1，及其所有文档和子
+                              目录，更改为目录 dir2.
+
+11.du		查看目录所占磁碟容量
+       命令格式: du [-sk] directory
+       例子 :
+              du dir1     显示目录 dir1 的总容量及其次目录的容量
+              du -sk dir1 显示目录 dir1 的总容量,以k bytes为计量
+
+	12.find	文件查找   
+       命令格式: find dir -name filename command
+       例子:
+              find . -name hello -print         寻找目前目录及所有的子目录内叫
+                                                 hello的文档.
+              find . -ctime +7 -print            找出七天内未被更动的文档
+              find . -size +2000m -print         找出大小超过2000 bytes的文档
+              find /tmp -user b1234567 -print    在/tmp下属於b1234567的文档
+              find . -name '*.c' -exec rm {}     删除所有的.c档
+              find . -name test\* -print         显示当前目录及其子目录文件名前4
+                                                 位为test的文件名
+13.man	随机文档
+             例子：
+            man command		  查看关于command的帮助内容
+man –k keyword          关键字查找
+man –s  number word     不同系统类别
+ example: man –s 3s printf 显示C语言中printf函数的help。
+	14.vi		编辑器
+命令状态：
+           j,k,h,l:上下左右
+           0： 行首
+           $:    行尾
+           i,I  :插入命令，i 在当前光标处插入 I 行首插入
+           a,A:追加命令，a 在当前光标后追加，A 在行末追加
+           o,O:打开命令，o 在当前行下打开一行，O在当前行上插入一行
+           r,R :替换命令，r 替换当前光标处字符，R从光标处开始替换
+           数字s: 替换指定数量字符
+           x:   删除光标处字符
+           dd: 删除当前行
+           d0: 删除光标前半行
+           d$: 删除光标后半行
+           ctrl+f :后翻页
+           ctrl+b:前翻页
+           G     :  文件尾
+           数字G: 数字所指定行
+	    /string 查找字符串
+           n        继续查找
+           N        反向继续查找
+    	       %        查找对应括号
+           u        取消上次操作
+			ctrl+r   恢复上次操作
+
+        ex命令状态           
+           ：set number       显示行号
+			：%s/string1/string2/g	执行全文替换（将string1替换为string2）。
+           ：n1，n2s/string1/string2/g 将n1行至n2行中的string1替换为string2
+           ：wq (或x)             存盘退出
+           ：q！
+
+B.	增强命令
+1.ln		文档连结
+       命令格式：ln [-s] oldname newname  
+                 ln [-n]
+       同一文档，可拥有一个以上之名称，可将文档做数个连结.
+       一个符号链是指向系统另一个文件的特殊文件，当访问这种文件时，它里面存放着  
+       一个路径名，该路径名用来引导用户到卡符号链所指的文件或目录
+       例子 ：
+       ln  -s file1  file2  　　将名称 file2，连结至文档 file1.
+
+2.grep		搜索字符串
+              命令格式: 
+          grep string filename
+       寻找字串的方法很多，比如说我想找所有以M开头的行.此时必须引进pattern的观
+        念.以下是一些简单的□例，以及说明：
+         - i：不分大小写。
+         - v：不包含指定模式的行。
+　　　　 -  l ：只给出包含给定模式的文件列表。
+　　　　-ｎ：文件中符合指定模式的每一行前面都加上该行在文件中的相对行号。
+　　　　　
+        ^M          以M开头的行，^表示开始的意思
+        M$          以M结尾的行，$表示结束的意思
+        ^[0-9]      以数字开始的行，[]内可列举字母
+        ^[124ab]    以1,2,4,a,或b开头的行
+        ^b.503      句点表示任一字母
+        *           星号表示0个以上的字母(可以没有)
+        +           加号表示1个以上的字母
+        \.          斜线可以去掉特殊意义
+        <eg>        cat passwd | grep ^b  列出大学部有申请帐号者名单
+                    cat passwd | grep ^s  列出交换学生申请帐号者名单
+                    cat passwd | grep '^b.503' 列出电机系各年级...
+                    grep '^\.' myfile.txt   列出所有以句点开头的行
+
+3.fgrep	搜索字符串
+   		命令格式：fgrep string file
+	4.file		显示文件类型
+       命令格式：file fileall
+             文件类型为shell script,ELF 32bit,ASCII text,data or tar file
+5.diff		比较文档或目录之不同内容
+		命令格式：diff [-r] name1 name2 ( name1 name2 可同时为档名，或目录名称.)
+		例子 :
+        %diff file1 file2
+        比较文档 file1 与 file2 内，各行之不同处.
+        %diff -r dir1 dir2
+        比较目录 dir1 与 dir2 内，各文档之不同处.
+6.cmp		比较文档相同部分
+  命令格式：cmp file1 file2
+7.ftp		远程文件传输
+		命令格式： ftp [hostname|IP address]
+       在进入 ftp 之後，如果与 remote host 连接上了，它将会询问你 username 
+       与密码，如果输入对了就可以开始进行文档传输.
+       注意：如用户无密码，无法注册
+       (1) ftp 命令 
+ascii 	将传输模式设为 ascii 模式.通常用於传送文字档.
+Binary	将传输模式设为 binary 模式，通常用於传送执行档，压缩档与影像
+cd remote-directory	将远程主机上的工作目录改变.
+lcd [ directory ] 	更改本地主机的工作目录.
+ls  	列出远程主机上的文档.
+get remote [ local-file ] 	取得远方的文档.
+mget remote-files 	可使用通配符一次取得多个文档.
+put local[ remote-file]	将本地主机的文档送到远程主机.
+mput local-files 	可使用通用字元一次将多个文档放到远程主机上.
+help [ command ] 	线上辅助指令.
+mkdir directory-name 	在远程主机创建一个目录.
+prompt	更改交谈模式，若为 on 则在 mput 与 mget 时每作一个文档之传输时均会询问.
+quit/bye 	离开ftp .
+8.telnet	  远程终端访问
+命令格式：
+telnet [hostname|IP address] [Port]
+    
+9.IO重新导向
+        UNIX所有的程式执行时，均需要资料的输入以及输出资料.一般而言，资料是
+        从键盘输入，并将资料输出到萤幕上，这就叫做标准输入及标准输出，而我们
+        可以更改标准出输出入.
+        A. 更改标准输入 —— 在命令後方加"< <filename>" ，即可从<filename>这
+                个文档输入资料.
+        B. 更改标准输出 —— 在命令後方加"> <filename>" ，即可将萤幕输出的资
+                料导向到<filename>这个文档上.
+        C. 更改标准输出 —— 在命令後方加">> <filename>"，功能与B.相似，只不
+                过这会将资料加在文档後方.
+        D. 管道 —— 在两个命令中间加上'|'，即可将前方指令的输出当成後方指令
+                的输入.
+        例:
+            cd /tmp
+            ls -l > /tmp/ls.out
+            cat /tmp/ls.out
+            more /tmp/ls.out
+            rm /tmp/ls.out
+            ls | more
+            ls | wc -l      (word count, count line number,算出文档数目)
+
+10.chmod	改变文档或目录之属性
+       命令格式：chmod [-R] mode name
+       ( name 可为档名或目录名;mode可为 3 个 8 位元之数字，或利用ls -l命令，列出
+       文档或目录之读、写、执行允许权之文字缩写.)
+        例子 :
+       %chmod  755 dir1　将目录dir1，设定成任何使用者，皆有读取及执行之权利，
+        但只有拥有者可做修改.
+       %chmod  700  file1
+        将文档file1，设定只有拥有者可以读、写和执行.
+       %chmod  u+x  file2
+        将文档file2，增加拥有者可以执行之权利.
+       %chmod  g+x  file3
+        将文档file3，增加群组使用者可执行之权利.
+       %chmod  o-r  file4
+        将文档file4，除去其它使用者可读取之权利.
+       %chmod  a-r  file4
+        将文档file4，除去所有使用者可读取之权利.
+
+11.who		查看系统注册用户
+12.ps	显示进程号
+命令格式：ps -ef  显示正在系统中运行的每一个进程的详细信息。
+13.kill	清除进程     
+命令格式： kill [-9]  pid  慎用-9，除非一个进程怎么都kill不掉时，才加此选项
+14.nohup非挂起运行
+  	15.tar命令
+     tar命令是用户级的备份命令，用于备份和恢复文件或目录.
+     命令格式： tar options tape_device_name [filename]
+     option  c-建立新文档     v-显示路径
+             t-显示文件列表   f-指定设备 
+             x-抽取文件       i-交互式
+     16.compress,uncompress 压缩/解压缩
+env  vi .cshrc  alias
