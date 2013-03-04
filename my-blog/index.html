@@ -1,0 +1,1952 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>首页</title>
+		<link href="css/base.css" rel="stylesheet" media="all" />
+		<link href="css/index.css" rel="stylesheet" media="all" />
+		<link href="themes/blackboard.css" rel="stylesheet" type="text/css" media="screen">
+		<script src="js/jQuery.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="demo_headeriner fn-clear">
+			笔记<span>( 知识、解决方案 )</span>
+		</div>
+		<div class="demo_content">
+			<div class="demo_content_listcont fn-left">
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="1">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								一、css 关于图片垂直水平居中问题解决方案  /×    兼容所有浏览器    ×/
+							</h6>
+							<blockquote>
+<pre><code data-language="css">
+.ojia_dR4_c2b_d1 a {
+	display:table-cell;
+	vertical-align:middle;
+	*display:block;	
+	text-align:center;
+	*font-family:Arial;/*防止非utf-8引起的hack失效问题，如gbk编码*/
+ 	*font-size: 201px;/*约为高度的0.873，230*0.873 约为201*/
+	width:230px;
+	height:230px;
+	line-height:230px;
+	border:1px solid #ddd;
+	overflow:hidden;
+}
+.ojia_dR4_c2b_d1 a img {	
+	vertical-align:middle;
+}
+</code></pre>
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="2">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								二、纯css实现圆角
+							</h6>
+							<blockquote>
+<pre><code data-language="css">
+.rtop , .rbottom {
+    display:block;
+    background:#fff;
+}
+.rtop * , .rbottom * {
+    display: block; 
+    height: 1px; 
+    overflow: hidden;
+    background:#ccc;
+}
+.r1 {
+    margin: 0 5px;
+}
+.r2 {
+    margin: 0 3px;
+}
+.r3 {
+    margin: 0 2px;
+}
+.r4 {
+    margin: 0 1px; 
+    height: 2px;
+}
+#withoutPic {
+	width: 500px;    
+	background:#ccc;
+	color:#fff;
+	margin:0 15px;
+}
+</code></pre>
+<pre><code data-language="html">
+	&lt;div id="withoutPic"&gt;
+	 &lt;b class="rtop"&gt;
+		&lt;b class="r1"&gt;&lt;/b&gt; 
+        &lt;b class="r2"&gt;&lt;/b&gt; 
+        &lt;b class="r3"&gt;&lt;/b&gt; 
+        &lt;b class="r4"&gt;&lt;/b&gt;
+	 &lt;/b&gt;
+	 &lt;p&gt;
+        This is a example of "不用图片实现 Rounded corners " 
+        by kissjava !!!
+     &lt;/p&gt;
+	 &lt;b class="rbottom"&gt;
+		&lt;b class="r4"&gt;&lt;/b&gt; 
+        &lt;b class="r3"&gt;&lt;/b&gt; 
+        &lt;b class="r2"&gt;&lt;/b&gt; 
+        &lt;b class="r1"&gt;&lt;/b&gt;
+	 &lt;/b>
+	&lt;/div>
+</code></pre>
+			                 </blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="3">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								三、css解决ie6 背景透明文字不透明
+							</h6>
+							<blockquote>
+<pre><code data-language="css">
+.waps { 
+	background:url(aaa.jpg) no-repeat top center fixed; 
+	width:1004px; 
+    text-align:center; 
+    line-height:28px; 
+	font-size:12px; 
+    font-family:Arial, Helvetica, sans-serif;
+}
+.con { 
+	text-align:left; 
+	width:100px;
+	height:400px;
+	margin:0px auto; 
+	/*padding:100px 50px;*/
+	background:rgba(0, 0, 0, 0.6) 
+    none repeat scroll 0 0 !important;/*实现FF背景透明，文字不透明*/
+	filter:Alpha(opacity=60); 
+    background:#000;/*实现IE背景透明*/
+}
+.con p {
+	color:#fff;
+	position:relative;
+}/*实现IE文字不透明*/
+</code></pre>
+<pre><code data-language="html">
+	&lt;div class="waps"&gt;
+	   &lt;div class="con"&gt;
+		 &lt;p&gt;
+		CSS实现背景透明，文字不透明（各浏览器兼容）CSS实现背景透明
+		&lt;/p&gt;
+	   &lt;/div&gt;
+	&lt;/div&gt;
+
+</code></pre>
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="4">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								四、解决ie6下的透明图片问题
+							</h6>
+							在对应的图片上添加类名：mypng<br />
+							<blockquote>
+<pre><code data-language="css">
+.mypng {
+	azimuth: expression(
+	this.pngSet?this.pngSet=true:(this.nodeName == 
+    "IMG" && this.src.toLowerCase().indexOf('.png')>-1
+    ?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = 
+    "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"
+     + this.src + "', sizingMethod='image')",
+	this.src = "{&STATIC}/images/transparent.gif"):
+    (this.origBg = this.origBg? 
+    this.origBg :this.currentStyle.
+    backgroundImage.toString().
+    replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:
+    DXImageTransform.Microsoft.AlphaImageLoader(
+    src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),
+    this.pngSet=true);
+}
+</code></pre>
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="5">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								五、解决ie6下透明背景的问题
+							</h6>
+							<blockquote>
+<pre><code data-language="css">
+.index_contenti {
+	width:950px;
+	height:1282px;
+	margin:0 auto;
+	margin-top:60px;			
+}
+.index_content {
+	height:1282px;				
+	background-image: 
+    url("{&STATIC}/images/index_content_bg_new.png")!important;
+    /* FF IE7 */
+	background-repeat: no-repeat;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader
+    (src="{&STATIC}/images/index_content_bg_new.png"); /* IE6 */
+	_background-image: none; /* IE6 */
+}
+.index_contentia {
+	position:relative;
+	z-index:100;
+}
+</code></pre>
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="6">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								六、关于100%解决方案
+							</h6>
+							<blockquote>
+								最外层div设置最小宽度并且不可以设置
+<pre><code data-language="css">
+overflow:hidden;
+</code></pre>
+里面一层设置：
+<pre><code data-language="css">
+background-images:none;
+</code></pre>
+最里面一层设置内容去的宽度并且：
+<pre><code data-language="css">
+margin:0 auto;
+</code></pre>居中处理
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="7">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								七、如何加载不同的css样式
+							</h6>
+							<blockquote>
+								加载不同的样式<br />
+								有的需求需要在页面不同时候加载不同的样式，原来有这么一招，<br />
+								页面上：  <br />
+<pre><code data-language="html">
+<link rel="Stylesheet" type="text/css" <br />
+href="/ui/css/default.css"runat="server" id="defaultcss" />
+</code></pre>
+								注意红色字体部分。<br />
+								在后台cs代码中，在需要加载不一样css的地方写上：
+<pre><code data-language="javascript">
+defaultcss.Attributes["href"] = "/css/abcd.css";
+</code></pre>
+								记得加上有效的路径。<br />
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="8">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								八、调整字和字符间距
+							</h6>
+							<blockquote>
+								Css设置文字横向间距<br />
+								css控制间距的样式有2个word-spacing 和letter-spacing<br />
+								word-spacing 属性增加或减少单词间的空白（即字间隔）。但是对汉字无效<br />
+								object.style.wordSpacing=”5px”<br />
+<pre><code data-language="html">
+&lt;span style=”word-spacing:50px;”&gt;&lt;/span&gt;
+</code></pre>
+								中国字<br />
+								this       is       a       test <br />
+								letter-spacing 属性增加或减少字符间的空白（字符间距）。<br />
+								该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。
+								脚本语法object.style.letterSpacing=”100px”<br />
+								下面是设置50px的letter-spacing字母间距 <br />
+								中       国       字<br />
+								t       h       i       s       i       s     a      t       e       s       t
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				
+				<div class="demo_content_listcont_li">
+					<div class="demo_content_listcont_lil fn-left">
+						<a name="9">
+							<img src="images/touxiang.jpg" />
+						</a>
+					</div>
+					<div class="demo_content_listcont_lir fn-left">
+						<div class="cont_text">
+							<h6>
+								九、超出文本用省略号显示
+							</h6>
+							<blockquote>
+<pre><code data-language="css">
+overflow: hidden;
+white-space: nowrap;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+</code></pre>
+							</blockquote>
+						</div>
+					</div>
+					<div class="fn-clear"></div>
+				</div>
+				<div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="10">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                         十、解决ie6下的position:fixed的问题
+                            </h6>
+                            <blockquote>
+                            像 你所遇到的问题一样， IE6浏览器有太多的bug让制作网页的人头疼。这篇文章介绍的是介绍的是如何解决IE6不支持position:fixed;
+                            属性的办法。如果我们需要 做某个元素始终位于浏览器的底部，不会因为浏览器窗口的缩放和滚动条的滚动而变化，
+                            那个肯定是想到的用position:fixed生成绝对定位，只要设 置这个CSS属性就能达到刚刚的需求。
+                            当其他浏览器都正常显示的时候，只有IE6不那么完美。该元素的位置是通过"left", "top", "right" 以及 "bottom" 属性进行规定。
+          一般的 position:fixed; 实现方法<br />
+<pre><code data-language="html">
+&lt;div id="top"&gt;...&lt;/div&gt; 
+</code></pre>
+这个 HTML 元素使用的 CSS 代码如下：
+<pre><code data-language="css">
+#top{
+position:fixed;
+bottom:0;
+right:20px;
+}
+</code></pre>
+实现让 
+<pre><code data-language="html">
+&lt;div id="top"&gt;...&lt;/div&gt; 
+</code></pre>
+元素固定在浏览器的底部和距离右边的20个像素。
+在 IE6 中实现 position:fixed; 的办法
+刚刚提过，在IE6中是不能直接使用 position:fixed; 。
+你需要一些 CSS Hack 来解决它。当然，IE6 的问题也不仅仅 position:fixed;
+相同的还是让
+<pre><code data-language="html">
+&lt;div id="top"&gt;...&lt;/div&gt; 
+</code></pre>
+元素固定在浏览器的底部和距离右边的20个像素，这次的代码是：
+<pre><code data-language="css">
+#top{
+position:fixed;
+_position:absolute;
+bottom:0;
+right:20px;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.
+documentElement.clientHeight-this.offsetHeight-(
+parseInt(this.currentStyle.marginTop,10)||0)-(
+parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+</code></pre>
+right 跟 left 属性可以用绝对定位的办法解决，而 top 跟 bottom 就需要用上面的表达式来实现。
+其中在 _position:absolute; 中的 _ 符号只有 IE6 才能识别，目的是为了区分其他浏览器。
+上面的只是一个例子，下面的才是最重要的代码片段：
+使元素固定在浏览器的顶部：
+<pre><code data-language="css">
+#top{
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop));
+}
+</code></pre>
+使元素固定在浏览器的底部：
+<pre><code data-language="css">
+#top{
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+</code></pre>
+这两段代码只能实现在最底部跟最顶部，你可以使用 _margin-top:10px; 
+或者 _margin-bottom:10px; 修改其中的数值控制元素的位置。
+position:fixed; 闪动问题<br />
+现在，问题还没有完全解决。在用了上面的办法后，你会发现：
+被固定定位的元素在滚动滚动条的时候会闪动。解决闪动问题的办法是在 CSS 文件中加入：
+<pre><code data-language="css">
+*html{
+background-image:url(about:blank);
+background-attachment:fixed;
+}
+</code></pre>
+其中 * 是给 IE6 识别的。
+到此，IE6 的 position:fixed; 问题已经被解决了。
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="11">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                    十一、css浏览器兼容问题整理                                           
+                            </h6>
+                            <blockquote>
+从网上收集了IE7,6与Fireofx的兼容性处理方法并整理了一下.
+对于web2.0的过度,请尽量用xhtml格式写代码,而且DOCTYPE 影响 CSS 处理,
+作为W3C的标准,一定要加 DOCTYPE声名. <br />   
+CSS技巧  <br /> 
+1.div的垂直居中问题 
+<pre><code data-language="css">
+vertical-align:middle; 
+</code></pre>
+将行距增加到和整个DIV一样高 
+<pre><code data-language="css">
+line-height:200px;
+</code></pre>
+ 然后插入文字，就垂直居中了。缺点是要控制内容不要换行    
+2. margin加倍的问题     设置为float的div在ie下设置的margin会加倍。
+这是一个ie6都存在的bug。解决方案是在这个div里面加上
+<pre><code data-language="css">
+display:inline;    
+</code></pre>
+例如：    
+<pre><code data-language="html">
+&lt;#div id=”imfloat”&gt;    
+</code></pre>
+相应的css为    
+<pre><code data-language="css">
+#IamFloat {    
+float:left;    
+margin:5px;/*IE下理解为10px*/    
+display:inline;/*IE下再理解为5px*/
+}    
+</code></pre>
+3.浮动ie产生的双倍距离     
+<pre><code data-language="css">
+#box { 
+float:left; 
+width:100px; 
+margin:0 0 0 100px; 
+//这种情况之下IE会产生200px的距离
+ display:inline; //使浮动忽略
+}    
+</code></pre>
+这里细说一下block与inline两个元素：
+block元素的特点是,总是在新行上开始,高度,宽度,行高,边距都可以控制(块元素);
+Inline元素的特点是,和其他元素在同一行上,不可控制(内嵌元素); 
+<pre><code data-language="css">   
+#box { 
+display:block; 
+//可以为内嵌元素模拟为块元素 
+display:inline; 
+//实现同一行排列的效果 
+diplay:table;  
+}
+</code></pre>   
+4 IE与宽度和高度的问题 IE 不认得min-这个定义，
+但实际上它把正常的width和height当作有min的情况来使。
+这样问题就大了，如果只用宽度和高度，正常的浏览器里这两个值就不会变，
+如果只用min-width和min-height的话，IE下面根本等于没有设置宽度和高度。   
+ 比如要设置背景图片，这个宽度是比较重要的。要解决这个问题，可以这样：   
+<pre><code data-language="css">
+#box { 
+width: 80px; 
+height: 35px;
+}
+html>body #box { 
+width: auto; 
+height: auto; 
+min-width: 80px; 
+min-height: 35px;
+}     
+</code></pre>
+5.页面的最小宽度     min -width是个非常方便的CSS命令，
+它可以指定元素最小也不能小于某个宽度，这样就能保证排版一直正确。
+但IE不认得这个，而它实际上把width当做最小宽度来使。
+为了让这一命令在IE上也能用，可以把一个<div> 放到
+ <body> 标签下，然后为div指定一个类, 然后CSS这样设计：    
+<pre><code data-language="css">
+#container { 
+min-width: 600px; 
+width:e-xpression(document.body.clientWidth < 
+600? "600px": "auto" );
+}  
+</code></pre>  
+第一个min-width是正常的；但第2行的width使用了Javascript，
+这只有IE才认得，这也会让你的HTML文档不太正规。它实际上通过Javascript的判断来实现最小宽度。  
+6.DIV浮动IE文本产生3象素的bug    
+左边对象浮动，右边采用外补丁的左边距来定位，右边对象内的文本会离左边有3px的间距. 
+<pre><code data-language="css">   
+#box { 
+float:left; 
+width:800px;
+}   
+#left { 
+float:left; 
+width:50%;
+}   
+#right { 
+width:50%;
+}   
+*html #left { 
+margin-right:-3px; //这句是关键
+} 
+</code></pre>
+<pre><code data-language="html">   
+&lt;div id="box"&gt;   
+&lt;div id="left"&gt;&lt;/div&gt;   
+&lt;div id="right"&gt;&lt;/div&gt;   
+&lt;/div>    
+</code></pre>
+7.IE捉迷藏的问题    当div应用复杂的时候每个栏中又有一些链接，
+DIV等这个时候容易发生捉迷藏的问题。    
+有些内容显示不出来，当鼠标选择这个区域是发现内容确实在页面。 解决办法：对
+#layout使用line-height属性 或者给#layout使用固定高和宽。页面结构尽量简单。    
+8.float的div闭合;清除浮动;自适应高度;     
+① 例如：
+<pre><code data-language="html">
+&lt;#div id=”floatA” &gt; 
+&lt;#div id=”floatB” &gt; 
+&lt;#div id=” NOTfloatC” &gt; 
+</code></pre>
+这里的NOTfloatC并不希望继续平移，而是希望往下排。
+(其中floatA、floatB的属性已经设置为 float:left;)   
+这段代码在IE中毫无问题，问题出在FF。原因是NOTfloatC并非float标签，
+必须将float标签闭合。在 
+<pre><code data-language="html">
+&lt;#div class=”floatB”&gt; 
+&lt;#div class=”NOTfloatC”&gt;
+</code></pre>
+之间加上
+<pre><code data-language="html">
+&lt; #div class=”clear”&gt;
+</code></pre>
+这个div一定要注意位置，而且必须与两个具有float属性的div同级，
+之间不能存在嵌套关系，否则会产生异常。 并且将clear这种样式定义为为如下即可： 
+<pre><code data-language="css">
+.clear{ clear:both;}     
+</code>
+②作为外部 wrapper 的 div 不要定死高度,为了让高度能自动适应，
+要在wrapper里面加上overflow:hidden; 当包含float的 box的时候，
+高度自动适应在IE下无效，这时候应该触发IE的layout私有属性(万恶的IE啊！)
+用zoom:1;可以做到，这样就达到了兼容。    
+例如某一个wrapper如下定义：    
+<pre><code data-language="css">
+.colwrapper { 
+overflow:hidden; 
+zoom:1; 
+margin:5px auto;
+}     
+</code></pre>
+③对于排版,我们用得最多的css描述可能就是 
+float:left.有的时候我们需要在n栏的float 
+div后面做一个统一的背景,譬如:
+<pre><code data-language="html">   
+&lt;div id=”page”&gt;   
+&lt;div id=”left”&gt;&lt;/div&gt;   
+&lt;div id=”center”&gt;&lt;/div&gt;   
+&lt;div id=”right”&gt;&lt;/div&gt;    
+&lt;/div&gt;   
+</code></pre>
+比如我们要将page的背景设置成蓝色,以达到所有三栏的背景颜色是蓝色的目的,
+但是我们会发现随着left center right的向下拉长,而 page居然保存高度不变,问题来了,
+原因在于page不是float属性,而我们的page由于要居中,不能设置成float,所以我们应该这样解决
+<pre><code data-language="html">    
+&lt;div id=”page”&gt;   
+&lt;div id=”bg” style=”float:left;width:100%”&gt;   
+&lt;div id=”left”&gt;&lt;/div&gt;  
+&lt;div id=”center”&gt;&lt;/div&gt;   
+&lt;div id=”right”&gt;&lt;/div&gt;   
+&lt;/div&gt;   
+&lt;/div&gt; 
+</code></pre>  
+再嵌入一个float left而宽度是100%的DIV解决之  
+④万能float 闭合(非常重要!)    
+关于 clear float 的原理可参见 
+[How To Clear Floats Without Structural Markup],
+将以下代码加入Global CSS 中,给需要闭合的div加上 class="clearfix" 即可,屡试不爽.    
+/* Clear Fix */    
+<pre><code data-language="css"> 
+.clearfix:after { 
+content:"."; 
+display:block; 
+height:0; 
+clear:both; 
+visibility:hidden; 
+}    
+.clearfix { 
+display:inline-block; 
+}    
+/* Hide from IE Mac */    
+.clearfix {display:block;}   
+/* End hide from IE Mac */ 
+/* end of clearfix */    
+/*或者这样设置：*/
+.hackbox{ 
+display:table; 
+//将对象作为块元素级的表格显示
+}   
+</code></pre> 
+11.高度不适应    高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，
+特别是当内层对象使用margin 或paddign 时。    例：   
+<pre><code data-language="css"> 
+#box {
+background-color:#eee; 
+}     
+#box p {
+margin-top: 20px;
+margin-bottom: 20px; 
+text-align:center; 
+} 
+</code></pre>
+<pre><code data-language="html">     
+&lt;div id="box"&gt;     
+&lt;p&gt;p对象中的内容&lt;/p&gt;     
+&lt;/div&gt; 
+</code></pre>    
+解决方法：在P对象上下各加2个空的div对象CSS代码：
+<pre><code data-language="css"> 
+.1 { 
+height:0px;
+overflow:hidden;
+}
+</code></pre>
+或者为DIV加上border属性。  
+12 .IE6下为什么图片下有空隙产生 解决这个BUG的方法也有很多,
+可以是改变html的排版,或者设置img 为
+<pre><code data-language="css"> 
+display:block 
+</code></pre>
+或者设置vertical-align 属性为 
+<pre><code data-language="css"> 
+vertical-align:top | 
+bottom |middle |text-bottom; 
+</code></pre>
+都可以解决.  
+13.如何对齐文本与文本输入框 加上 
+<pre><code data-language="css"> 
+vertical-align:middle; 
+input {      
+ width:200px;      
+ height:30px;      
+ border:1px solid red;      
+ vertical-align:middle; 
+} 
+</code></pre>
+14.web标准中定义id与class有什么区别吗 一.
+web标准中是不容许重复ID的,比如 
+div id="aa"   不容许重复2次,而class 定义的是类,理论上可以无限重复, 
+这样需要多次引用的定义便可以使用他. 
+二.属性的优先级问题 ID 的优先级要高于class,看上面的例子 
+三.方便JS等客户端脚本,如果在页面中要对某个对象进行脚本操作,那么可以给他定义一个ID,
+否则只能利用遍历页面元素加上指定特定属性来找到它,这是相对浪费时间资源,远远不如一个ID来得简单.  
+15. LI中内容超过长度后以省略号显示的方法 此方法适用与IE与OP浏览器 
+<pre><code data-language="css"> 
+li {      
+width:200px;      
+white-space:nowrap;      
+text-overflow:ellipsis;      
+-o-text-overflow:ellipsis;      
+overflow: hidden;      
+} 
+</code></pre>
+16.为什么web标准中IE无法设置滚动条颜色了 解决办法是将body换成html 
+<pre><code data-language="html"> 
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "
+http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt; 
+&lt;meta http-equiv="Content-Type" content="text/html; 
+charset=gb2312" /&gt; 
+&lt;style type="text/css"&gt; 
+<!-- html {      scrollbar-face-color:#f6f6f6;      
+ scrollbar-highlight-color:#fff;      
+ scrollbar-shadow-color:#eeeeee;      
+ scrollbar-3dlight-color:#eeeeee;      
+ scrollbar-arrow-color:#000;      
+ scrollbar-track-color:#fff;      
+ scrollbar-darkshadow-color:#fff;      
+} --> &lt;/style&gt;  
+</code></pre>
+17.为什么无法定义1px左右高度的容器 IE6下这个问题是因为默认的行高造成的,解决的方法也有很多,例如:
+<pre><code data-language="css"> 
+overflow:hidden 
+zoom:0.08 
+line-height:1px
+</code></pre>  
+18.怎么样才能让层显示在FLASH之上呢 解决的办法是给FLASH设置透明 
+<pre><code data-language="html"> 
+&lt;param name="wmode" value="transparent" /&gt; 
+</code></pre> 
+19.怎样使一个层垂直居中于浏览器中 这里我们使用百分比绝对定位,
+与外补丁负值的方法,负值的大小为其自身宽度高度除以二 
+<pre><code data-language="html"> 
+&lt;style type="text/css"&gt; 
+<!-- 
+div {      
+position:absolute;      
+top:50%;      
+lef:50%;      
+margin:-100px 0 0 -100px;      
+width:200px;      
+height:200px;      
+border:1px solid red;      
+} 
+--> &lt;/style&gt;     
+</code></pre>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="12">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                    一、关于基于jQuery的轮播插件soChange的参数解释<a  class="a_down" href="http://code.google.com/p/sochange-juqeryplugin/downloads/list">(点击下载)</a></h1>
+                            </h6>
+                            <blockquote>所有参数：
+<pre><code data-language="javascript">
+$(obj).soChange({
+    thumbObj:null, //导航对象，默认为空
+    botPrev:null, //按钮上一个，默认为空
+    botNext:null, //按钮下一个。默认为空
+    changeType:'fade',/×切换方式，可选：fade,slide，
+          默认为fade，1.6版新增方法，详见例3-定义对象切换方式为slide×/
+    thumbNowClass:'now', //导航对象当前的class,默认为now
+    thumbOverEvent:true,/×鼠标经过thumbObj时是否切换对象，默认为true，
+    为false时，只有鼠标点击thumbObj才切换对象×/
+    slideTime:1000, /×平滑过渡时间，默认为1000ms，为0或负值时，
+    忽略changeType方式，切换效果为直接显示隐藏×/
+    autoChange:true, //是否自动切换，默认为true
+    clickFalse:true,/×导航对象点击是否链接无效，默认是return false链接无效，
+    当thumbOverEvent为false时，此项必须为true，否则鼠标点击事件冲突×/
+    overStop:true,/×鼠标经过切换对象时，是否停止切换，
+    并于鼠标离开后重启自动切换，前提是已开启自动切换×/
+    changeTime:5000, //对象自动切换时间，默认为5000ms，即5秒
+    delayTime:300 //鼠标经过时对象切换迟滞时间，推荐值为300ms
+});
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                 <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="13">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                    二，走马灯无缝滚动                                           
+                            </h6>
+                            <blockquote>
+<pre><code data-language="css">
+#marquee ,#marquee li { 
+padding:0px; 
+margin:0px;
+}
+#marquee { 
+position:relative; 
+list-style:none; 
+height:150px; 
+width:210px; 
+padding-left:5px; 
+overflow:hidden; 
+border:10px solid #eee; 
+}
+#marquee li { 
+position:absolute; 
+font-size:12px;
+}
+#marquee p { 
+color:#999999;
+}
+</code></pre>
+<pre><code data-language="javasvript">
+
+  var Marquee = function(id){
+    try{document.execCommand("
+    BackgroundImageCache", false, true);}catch(e){};
+    var container = document.getElementById(id),
+    slide = container.getElementsByTagName("li")[0],
+    speed = arguments[1] || 80,  //速度
+    delta = 0,
+    //当前滚动的位置
+    critical = slide.offsetHeight;
+    //临界点
+    slide.innerHTML += slide.innerHTML;
+    var rolling = function(){
+      delta == -critical ? delta = 0 : delta--;
+      slide.style.top = delta + "px";
+    }
+    var timer = setInterval(rolling,speed)
+    //设置定时器
+    container.onmouseover=function() {clearInterval(timer)}
+    //鼠标移到marquee上时，清除定时器，停止滚动
+    container.onmouseout=function() {timer=setInterval(rolling,speed)}
+    //鼠标移开时重设定时器
+  }
+  window.onload = function(){
+    Marquee("marquee");
+  }
+</code></pre>
+<pre><code data-language="html">
+&lt;ul id="marquee"&gt;
+  &lt;li&gt;
+    &lt;p&gt;
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，
+        飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。纤云弄巧，飞星传恨，银汉迢迢暗度。
+        纤云弄巧，飞星传恨，银汉迢迢暗度。-------------------
+    &lt;/p&gt;
+    
+  &lt;/li&gt;
+&lt;/ul>
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                 <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="14">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                三、一个内容上下循环滚动效果   （如一个li为单位）                                         
+                            </h6>
+                            <blockquote>
+<pre><code data-language="javascript">
+var slideOperate = {
+	slideUlId : "",//UL id 用于操作Ul
+	fadeInTime : 2000,//淡出淡入时间
+	slideDownTime : 5000,//滑动时间
+	nextDown:function(){
+    //往下滑动(前提Ul竖排)
+		var lastLi = $("#" + this.slideUlId + " li:last-child");
+		$("#" + this.slideUlId + " li:first-child").before(lastLi);
+        //前置
+		$(lastLi).find("div").fadeOut();
+        //隐藏最后一个li的内容
+		$(lastLi).hide()
+        ;//隐藏最后一个li				
+		$(lastLi).find("div").fadeIn(this.fadeInTime,function(){
+			$(lastLi).slideDown(this.slideDownTime);
+		});
+	}
+};
+</code></pre>
+初始化：
+<pre><code data-language="javascript">
+$(document).ready(function(){
+	slideOperate.slideUlId = "ulRowCount";         
+     //slideRow.js的初始化设置（re_odr_other网页内容滚动js（slideRow.js））
+	setInterval("slideOperate.nextDown()",5000);   
+     //slideRow.js的初始化设置 （re_odr_other网页内容滚动js（slideRow.js））
+});
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                 <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="15">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                四、简单的弹出框                                            
+                            </h6>
+                            <blockquote>
+<pre><code data-language="javascript">
+$(function(){       
+    $(".charity_login_register").hide();
+    var screenwidth,screenheight,mytop,getPosLeft,getPosTop;
+    screenwidth = $(window).width();                
+    screenheight = $(window).height();              
+    mytop = $(document).scrollTop();
+    getPosLeft = screenwidth/2-380;
+    getPosTop = screenheight/2-140;
+    $(".charity_login_register").css({
+    "left":getPosLeft,"top":getPosTop});
+    $(window).resize(function(){
+        screenwidth = $(window).width();
+        screenheight = $(window).height();
+        mytop = $(document).scrollTop();
+        getPosLeft = screenwidth/2-380;
+        getPosTop = screenheight/2-140;
+        $(".charity_login_register").css({
+        "left":getPosLeft,"top":getPosTop+mytop});
+    });             
+    $(window).scroll(function(){
+        screenwidth = $(window).width();
+        screenheight = $(window).height();
+        mytop = $(document).scrollTop();
+        getPosLeft = screenwidth/2-380;
+        getPosTop = screenheight/2-140;
+        $(".charity_login_register").css({
+        "left":getPosLeft,"top":getPosTop+mytop});
+    });             
+    $(".charity_contentR_unapply_a").click(function(){
+        $(".charity_login_register").fadeIn("fast");
+        $("body").append("<div id='greybackground'></div>");
+        var documentheight = $(document).height();
+        $("#greybackground").css({
+        "opacity":"0.5","height":documentheight});
+        return false;
+    });
+    $(".charity_login_registerClose").click(function(){
+        $(".charity_login_register").hide();
+        $("#greybackground").remove();
+        return false;
+    });
+}); 
+</code></pre>
+<pre><code data-language="css">
+.charity_login_register {
+    position:absolute;  
+    width:754px;
+    height:355px;
+    background:url("
+    ../images/20120308/charity_login_register.jpg") 
+    no-repeat left top;
+    z-index:99999;
+}
+#greybackground {
+    background: none repeat scroll 0 0 #000000;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                 <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="16">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                               五、收藏，刷新，设为首页                                                     
+                            </h6>
+                            <blockquote>
+
+    收藏：
+<pre><code data-language="javascript">
+function AddFavorite(sURL, sTitle){
+        try{
+            window.external.addFavorite(sURL, sTitle);
+        }catch (e){
+            try{
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }catch (e){
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+}
+</code></pre>
+<pre><code data-language="html">
+&lt;a href="#" title="收藏本页" 
+class="charity_box2_elevator_a1" 
+onclick="AddFavorite(window.location,document.title);"&gt;&lt;/a&gt;
+</code></pre>
+刷新：
+<pre><code data-language="javascript">
+function reload() {
+window.location.reload();
+}
+</code></pre>
+设为首页：
+<pre><code data-language="javascript">
+function SetHome(obj,vrl)
+{
+try
+{
+   obj.style.behavior='url(#default#homepage)';
+   obj.setHomePage(vrl);
+}
+catch(e){
+if(window.netscape) {
+try {
+    netscape.security.PrivilegeManager.enablePrivilege(
+    "UniversalXPConnect");
+}
+catch (e) {
+alert("此操作被浏览器拒绝！
+\n请在浏览器地址栏输入“about:config”并回车\n
+然后将[signed.applets.codebase_principal_support]设置为'true'");
+}
+var prefs = Components.classes['
+@mozilla.org/preferences-service;1']
+.getService(Components.interfaces.nsIPrefBranch);
+prefs.setCharPref('browser.startup.homepage',vrl);
+ }
+}
+}
+</code></pre>
+<pre><code data-language="html">
+&lt;input id="Button3" type="button" value="设为首页" 
+onclick="SetHome(this,window.location)" style="cursor:hand" /&gt;
+</code></pre>
+
+
+设为首页2
+<pre><code data-language="javascript">
+ //Set Homepage and add favorite link
+$("#sethomepage").click(function(){
+var url = this.href;
+try {
+this.style.behavior = "url(#default#homepage)";
+this.setHomePage(url);
+} catch (e) {
+if (window.netscape) {
+    try {
+        netscape.security.PrivilegeManager.
+        enablePrivilege("UniversalXPConnect");
+    } catch (e) {
+        alert("此操作被浏览器拒绝！
+        \n请在浏览器地址栏输入“about:config”并回车\n
+        然后将 [signed.applets.codebase_principal_support]
+        的值设置为'true',双击即可。");
+        return false;
+    }
+    var prefs = Components.classes
+    ["@mozilla.org/preferences-service;1"].getService
+    (Components.interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+}
+}
+return false;
+});
+</code></pre>
+// 设为首页
+<pre><code data-language="javascript">
+$("#sethomepage").click(function(){
+var url = this.href;
+try {
+this.style.behavior = "url(#default#homepage)";
+this.setHomePage(url);
+} catch (e) {
+if (document.all) {
+document.body.style.behavior="url(#default#homepage)";
+document.body.setHomePage(url);            
+} else if (window.sidebar) {
+if (window.netscape) {
+    try {
+     netscape.security.PrivilegeManager.enablePrivilege("\n
+     UniversalXPConnect");
+     } catch (e) {
+ alert("此操作被浏览器拒绝！\n
+         请在浏览器地址栏输入
+ “about:config”并回车\n然后将 \n
+ [signed.applets.codebase_principal_support]\n
+         的值设置为'true',双击即可。");
+         return false;
+     }
+}
+var prefs = 
+Components.classes["@mozilla.org/preferences-service;1"]
+.getService(Components.interfaces.nsIPrefBranch);
+prefs.setCharPref('browser.startup.homepage',url);
+} else {
+alert('
+您的浏览器不支持自动设置首页, \n
+ 使用浏览器菜单或在浏览器地址栏输入\n
+“chrome://settings/browser”手动设置!');\n
+$("#sethomepage").href();
+}
+}
+return false;
+});
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="17">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                               六、解决include上方的空格                                            
+                            </h6>
+                            <blockquote>
+include 一个文件之后，这块代码的上面出现了很多空格，有木有！！！<br />
+
+前段时间我就遇到这样的问题，用 Firebug 查看，看到代码有一个地方“断”开了，<br />
+点击那块区域竟然能编辑，里面全是空格。把这些空格删掉之后页面就正常了。<br />
+好吧，既然是页面上多了空格，那就删掉。然后在源文件里没有看到空格，<br />
+甚至连标签的缩进都删除了，那些空格依然存在。<br />
+经过排查，发现是 include 的文件问题，<br />
+但是为什么这个文件会有问题呢？<br />
+百度 GG 后，才知道这个问题由 utf-8 文件 Unicode 签名 (BOM) 产生的。<br />
+所以要把文件重新存储一下，把编码选择为无BOM格式
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="18">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                             七、设置input框默认文字       小插件smartfocus                                        
+                            </h6>
+                            <blockquote>
+<pre><code data-language="javascript">
+$.fn.smartFocus = function (options) {
+    var defaults = { defaultText: '璇疯緭鍏ユ枃瀛� ,class_name: null};
+    var opt = $.extend(defaults, options);
+    return this.each(function () {
+        $(this).focus(function () {
+            var text = $(this).val();
+            if (text == opt.defaultText) {
+                $(this).val('');
+                if(opt.class_name){
+                    $(this).removeClass(opt.class_name);
+                } else {
+                    $(this).attr('style','');
+                }
+            }
+        }).blur(function () {
+            var text = $(this).val();
+            if (text == '') {
+                $(this).val(opt.defaultText);
+                if(opt.class_name){
+                    $(this).addClass(opt.class_name);
+                } else {
+                    $(this).css({"color":"#999", "font-size":"12px"});
+                }
+            } else {
+                $(this).removeClass(opt.class_name);
+            }
+        });
+        if ($(this).val() == '') {
+            $(this).val(opt.defaultText);
+            if(opt.class_name){
+                $(this).addClass(opt.class_name);
+            } else {
+                $(this).css({"color":"#999", "font-size":"12px"});
+            }
+        } 
+    });
+};
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="19">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                              八、复制粘贴文字                                              
+                            </h6>
+                            <blockquote>
+<pre><code data-language="javascript">
+function   onPaste()
+{
+    var   ctrl   =   event.srcElement;
+    var   text   =   window.clipboardData.getData( "Text ");
+    if(text!=null)    {
+        if(ctrl.value.length   > =   maxLength)
+           event.returnValue   =   false;
+        else   if(text.length   >   maxLength   -   ctrl.value.length)
+           window.clipboardData.setData( "Text ",   
+           text.substr(0,   maxLength   -   ctrl.value.length));
+    }
+}
+</code></pre>
+只是剪切板改掉了,   不能恢复..
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="20">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                九、如何实现窗口全屏
+                            </h6>
+                            <blockquote>
+<pre><code data-language="javascript">
+function fullWindow(){
+    if (window.screen) {/*判断浏览器是否支持window.screen判断浏览器是否支持screen   */ 
+        var sw = screen.availWidth;   /*定义一个myw，接受到当前全屏的宽 */    
+        var sh = screen.availHeight;  /*定义一个myw，接受到当前全屏的高 */
+        var csw=document.body.clientWidth;
+        var csh=document.body.clientHeight;
+        if( sw < csw || sh < csh ){
+        window.moveTo(0, 0);
+        /*把window放在左上脚  */  
+        window.resizeTo(sw, sh);     
+        /*把当前窗体的长宽跳转为sw,sh  */  
+        }
+     }  
+}
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="21">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                十、最大最小高度设置
+                            </h6>
+                            <blockquote>
+                                1、IE6支持max-height解决方法   
+                                IE6支持最大高度解决CSS代码：
+<pre><code data-language="css">
+.yangshi{max-height:1000px;
+_height:expression((document.documentElement.clientHeight
+||document.body.clientHeight)<1000?"1000px":"");
+overflow:hidden;}
+</code></pre>
+说明：
+<pre><code data-language="css">
+max-height:1000px; 
+</code></pre>
+这个是IE6以上级其它品牌浏览器支持最大范围高度。而
+<pre><code data-language="css">
+_height:expression((document.documentElement.clientHeight
+||document.body.clientHeight)<1000?"1000px":"");
+overflow:hidden;
+</code></pre>
+则是让IE6支持max-height替代CSS代码，但效果和其它版本浏览器相同效果。
+
+让所有浏览器都支持max-height的CSS样式代码，完整：
+<pre><code data-language="css">
+max-height:1000px;
+_height:expression((document.documentElement.clientHeight
+||document.body.clientHeight)<1000?"1000px":""); 
+overflow:hidden;
+</code></pre>
+这里的1000和1000px是你需要的数值，注意3个数值的相同。
+
+让IE6支持最大高度max-height的时候别忘记加上
+<pre><code data-language="css">
+overflow:hidden;
+</code></pre>
+2、IE6支持min-height解决方法    
+IE6支持最小高度解决CSS代码：
+<pre><code data-language="css">
+.yangshi{min-height:1000px;
+_height:expression((document.documentElement.clientHeight
+||document.body.clientHeight)>1000?"1000px":"");}
+</code></pre>
+
+说明：
+<pre><code data-language="css">
+min-height:1000px; 
+</code></pre>
+这个是IE6以上级其它品牌浏览器支持最小范围高度。而
+<pre><code data-language="css">
+_height:expression((document.documentElement.clientHeight
+||document.body.clientHeight)>1000?"1000px":"");
+</code></pre>
+则是让IE6支持min-height替代CSS代码，但 
+效果和其它版本浏览器相同效果。
+
+让所有浏览器都支持min-height的CSS样式代码，完整：
+<pre><code data-language="css">
+min-height:1000px;
+_height:expression((document.documentElement.clientHeight||
+document.body.clientHeight)>1000?"1000px":""); 
+</code></pre>
+这里的1000和1000px是你需要的数值，注意3个数值的相同。
+
+3、IE6支持max-height又支持min-height方法    
+让所有浏览器包括IE6即支持最大高度又支持最小高度。
+<pre><code data-language="css">
+.yangshi{Max-Height:620px;Min-Height:40px;_height:
+expression(this.scrollHeight > 620 ? "620px" : 
+(this.scrollHeight < 40 ? "40px" : "auto"));}
+
+</code></pre>
+IE6支持Max-Height和支持Min-Height CSS代码
+<pre><code data-language="css">
+_height:expression(this.scrollHeight > 620 ? "620px" : 
+(this.scrollHeight < 40 ? "40px" : "auto"));
+</code></pre>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="22">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                十一、js中常用元素属性scrollLeft,scrollWidth,clientWidth,offsetWidth的解释
+                            </h6>
+                            <blockquote>
+                                scrollHeight: 获取对象的滚动高度。<br />
+                                scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br />
+                                scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br />
+                                scrollWidth:获取对象的滚动宽度<br />
+                                offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br />
+                                offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br />
+                                offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br />
+                                event.clientX 相对文档的水平座标<br />
+                                event.clientY 相对文档的垂直座标<br />
+                                event.offsetX 相对容器的水平坐标<br />
+                                event.offsetY 相对容器的垂直坐标<br />
+                                document.documentElement.scrollTop 垂直方向滚动的值<br />
+                                event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br />
+                                以上主要指IE之中，FireFox差异如下：<br />
+                                IE6.0、FF1.06+：<br />
+                                clientWidth = width + padding<br />
+                                clientHeight = height + padding<br />
+                                offsetWidth = width + padding + border<br />
+                                offsetHeight = height + padding + border<br />
+                                IE5.0/5.5：<br />
+                                clientWidth = width - border<br />
+                                clientHeight = height - border<br />
+                                offsetWidth = width<br />
+                                offsetHeight = height(需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br />
+
+
+
+                                网页可见区域宽： document.body.clientWidth;<br />
+                                网页可见区域高： document.body.clientHeight;<br />
+
+                                网页可见区域宽： document.body.offsetWidth (包括边线的宽);<br />
+                                网页可见区域高： document.body.offsetHeight (包括边线的宽);<br />
+
+                                网页正文全文宽： document.body.scrollWidth;<br />
+                                网页正文全文高： document.body.scrollHeight;<br />
+
+                                网页被卷去的高： document.body.scrollTop;<br />
+                                网页被卷去的左： document.body.scrollLeft;<br />
+
+                                网页正文部分上： window.screenTop;<br />
+                                网页正文部分左： window.screenLeft;<br />
+
+                                屏幕分辨率的高： window.screen.height;<br />
+                                屏幕分辨率的宽： window.screen.width;<br />
+
+                                屏幕可用工作区高度： window.screen.availHeight;<br />
+                                屏幕可用工作区宽度：window.screen.availWidth;<br />
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="23">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                    十二、自定义表单——美化你的文件载入框                                           
+                            </h6>
+                            <blockquote>
+                                                                                    表 单的制作常常给我们带来无比的烦恼，比如说表单中的“input[type="radio"]、
+                              input[type="checkbox"]、 select和input[type="file"]”之类，
+                                                                                    我们都无法直接通过样式来达到设计的设计要求，如果为了实现设计的设计的优美效果，
+                                                                                    我们必须 通过CSS和js来实现。下面我们一起来学习如何让“input[type="file"]”实现下图那种效果：
+                               <img src="images/inputfilepic.jpg" /> <br />
+                               现在我们知道我们的目标了，下面开始我们一起来学习如何实现上图展示的“input[type="file"]”表单元素效果。<br />
+一、HTML Markup
+<pre><code data-language="html">
+&lt;form action="" class="form" method="post"&gt;
+    &lt;label for="" class="cabinet"&gt;
+        &lt;input type="file" class="file" /&gt;
+    &lt;/label&gt;
+&lt;/form&gt;
+</code></pre>        
+我们给表单元素
+<pre><code data-language="html">
+&lt;input type="file" /&gt;
+</code></pre>
+定义了一个类名“file”，
+并且在他的外面包裹了一个名叫“cabinet”的“<label>”标签。
+注：为 了配合后面的“SI.Files.js”中的对象，我们最好在这里的包裹元素，
+以及其“input[type="file"]”元素和包裹他的 “label”元素和他们定义的“class”类名都保持不变。
+当然要是你js比较厉害的话，你要根据你自己的需求去改变也无仿，只要能让他帮你实现功能 就OK了。
+古话说的，不管白猫和黑猫只要能抓到老鼠的就是好猫。<br />
+二、CSS Code<br />
+<pre><code data-language="css">
+.siFiles  label.cabinet {
+    width: 79px;
+    height: 22px;
+    background: url("images/btn-choose-file.gif") 0 0 no-repeat;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+.siFiles  input.file {
+    position: relative;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0); 
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+</code></pre>        
+我们通过上面的CSS样式来帮助我们实现表单元素的美化。
+当然大家并不一定要按照上面的样式一尘不变，你完全可以根据你自己的设计需求去写你自己需要的样式，
+我这里只是为了实现上图展示的效果写的一个简单的样式。<br />
+三、javaScript Code<br />
+下面也是我们今天这个教程中最关键的部分——美化“input[type="file"]”
+表单元素功能所需的js代码。说实在的，这部分代码我好多没有看懂，但照搬我还是会的。
+所以我直接从Shaun Inman写的《style file inputs with css and the dom》
+教程中把代码扣下来放在本站，让大家更好的阅读和学习：
+<pre><code data-language="javascript">
+// STYLING FILE INPUTS 1.0 | Shaun Inman  | 2007-09-07
+if (!window.SI) { var SI = {}; };
+SI.Files =
+{
+    bodyClass : 'siFiles',
+    fileClass : 'file',
+    wrapClass : 'cabinet',
+    
+    fini : false,
+    able : false,
+    init : function()
+    {
+        this.fini = true;
+        
+        var ie = 0 //@cc_on + @_jscript_version
+        if (window.opera || (ie && ie < 5.5) || 
+        !document.getElementsByTagName) { return; }
+         // no support for opacity or the DOM
+        this.able = true;
+        
+        var body = document.getElementsByTagName('body')[0];
+        body.className += 
+        (body.className != '' ? ' ' : '') + this.bodyClass;
+    },
+    
+    stylize : function(elem)
+    {
+    if (!this.fini) { this.init(); };
+    if (!this.able) { return; };
+    
+    elem.parentNode.file = elem;
+    elem.parentNode.onmousemove = function(e)
+    {
+    if (typeof e == 'undefined') e = window.event;
+    if (typeof e.pageY == 'undefined' &&  
+    typeof e.clientX == 'number' && document.documentElement)
+    {
+        e.pageX = e.clientX + document.documentElement.scrollLeft;
+        e.pageY = e.clientY + document.documentElement.scrollTop;
+    };
+
+    var ox = oy = 0;
+    var elem = this;
+    if (elem.offsetParent)
+    {
+        ox = elem.offsetLeft;
+        oy = elem.offsetTop;
+        while (elem = elem.offsetParent)
+        {
+            ox += elem.offsetLeft;
+            oy += elem.offsetTop;
+        };
+    };
+
+    var x = e.pageX - ox;
+    var y = e.pageY - oy;
+    var w = this.file.offsetWidth;
+    var h = this.file.offsetHeight;
+
+    this.file.style.top     = y - (h / 2)  + 'px';
+    this.file.style.left    = x - (w - 30) + 'px';
+    };
+    },
+    
+    stylizeById : function(id)
+    {
+        this.stylize(document.getElementById(id));
+    },
+    
+    stylizeAll : function()
+    {
+        if (!this.fini) { this.init(); };
+        if (!this.able) { return; };
+        
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++)
+        {
+            var input = inputs[i];
+            if (input.type == 'file' && input.
+            className.indexOf(this.fileClass) != -1 && 
+            input.parentNode.className.indexOf(this.wrapClass) != -1)
+            {
+                this.stylize(input);
+            };
+        };
+    }
+};
+</code></pre>        
+                               你也可以把上面的代码完全copy下来，保存成一个文件，
+                               我在此处将其保存在项目的“js”目录下，并且使命名为“si.files.js”。
+           js代码扣下来以后，我们需要在项目中引用这个js:
+<pre><code data-language="html">
+&lt;script type="text/javascript" 
+src="js/si.files.js"&gt;&lt;/script&gt;
+</code></pre>       
+当然大家在引用的时候需要注意您的路径，这一点不用我说应该知道吧。
+“si.files.js”载入进来后并没有完成，我们还需要调用它：
+<pre><code data-language="html">
+&lt;script type="text/javascript"&gt;
+    SI.Files.stylizeAll();
+&lt;/script&gt;           
+</code></pre>       
+这一部分怎么调用对于老手来说不用讲了，你只要把这段代码放在刚才那个“si.files.js”后面就OK了。
+上面这个“si.files.js”还提供了两种调用的方法：<br />
+1、元素的ID名：
+<pre><code data-language="html">
+&lt;script type="text/javascript"&gt;
+SI.Files.stylizeById('input-id');
+&lt;/script&gt;           
+</code></pre>
+这里的“input-id”指的就是你HTML Markup中“input[tpye="file"]”元素的ID名。<br />
+2、元素的节点：
+<pre><code data-language="html">
+&lt;script type="text/javascript"&gt;
+    SI.Files.stylize(HTMLInputNode);
+&lt;/script&gt;  
+</code></pre>         
+        
+四、工作原理<br />
+首先我们通一样式对其进行了外观的包装，让其达到设计图的要求。
+我们的包装元素“label”和其背景图片的尺寸刚好匹配了按钮的图像设置。
+接着我 们把“input[type="file"]”元素也就是我们所说的文件输入框本身的透明度设置为“0”，
+让他产生一种假像的“隐藏”效果，但他仍然是可 以点击的。
+不过这里有一点非常重要“大家不能为了说让“input[type="file"]”达到隐藏效果，
+直接将其设置为“display:none”和“visibility:hidden”。如果你真的是这样设置，
+那么你将带来灾难性的后果，你做的一切将是无效的。这一点大家一定要记住了。
+”最后在通过“si.files.js”实现文件输入框的功能效果。<br />
+五、浏览器的兼容性<br />
+这种实现方法能在“IE6+”、“Firefox1.5+”、“Safari2+”、“chrome”、“opera”下正常工作。
+                      </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+                <div class="demo_content_listcont_li">
+                    <div class="demo_content_listcont_lil fn-left">
+                        <a name="24">
+                            <img src="images/touxiang.jpg" />
+                        </a>
+                    </div>
+                    <div class="demo_content_listcont_lir fn-left">
+                        <div class="cont_text">
+                            <h6>
+                                                                                        十三、控制密码复杂度小例子                                                     
+                            </h6>
+                            <blockquote>
+                            对应的css样式
+<pre><code data-language="css">
+#pwd-strength {
+        200px;
+        padding-top: 2px;
+        font: normal 13px/1.6 Tahoma, Verdana, serif;
+}
+#pwd-strength ul,li { 
+        list-style:none; 
+        padding: 1px; 
+}
+.pwd-strength-box,
+.pwd-strength-box-low,
+.pwd-strength-box-med,
+.pwd-strength-box-hi
+{
+        float: left;
+        color: #464646;
+        text-align: center;
+        30%;
+        margin: -1px 0 0 -1px; 
+        border: 1px solid #D6B673;
+        background-color: #fff;
+}
+.pwd-strength-box-low
+{
+        color: #fff;
+        background-color: #FF0000;
+}
+.pwd-strength-box-med
+{
+        color: #fff;
+        background-color: #FF9900;
+}
+.pwd-strength-box-hi
+{
+        color: #fff;
+        background-color: #009900;
+} 
+</code></pre>
+相应的js代码
+<pre><code data-language="javascript">
+function checkPassword(pwd){
+var objLow=document.getElementById("pwdLow");
+var objMed=document.getElementById("pwdMed");
+var objHi=document.getElementById("pwdHi");
+objLow.className="pwd-strength-box";
+objMed.className="pwd-strength-box";
+objHi.className="pwd-strength-box";
+if(pwd.length<6){
+objLow.className="pwd-strength-box-low";
+}else{
+var p1= (pwd.search(/[a-zA-Z]/)!=-1) ? 1 : 0;
+var p2= (pwd.search(/[0-9]/)!=-1) ? 1 : 0;
+var p3= (pwd.search(/[^A-Za-z0-9_]/)!=-1) ? 1 : 0;
+var pa=p1+p2+p3;
+if(pa==1){
+objLow.className="pwd-strength-box-low";
+}else if(pa==2){
+objMed.className="pwd-strength-box-med";
+}else if(pa==3){
+objHi.className="pwd-strength-box-hi";
+}
+}
+}
+</code></pre>  
+本例子的html代码 
+<pre><code data-language="html">
+&lt;input type="password" name="password" size="25" 
+tabindex="4" onkeyup="checkPassword(this.value);" /&gt;
+    &lt;div id="pwd-strength"&gt;
+             &lt;ul&gt;
+               &lt;li class="pwd-strength-box" id="pwdLow"&gt;简单 &lt;/li&gt;
+               &lt;li class="pwd-strength-box" id="pwdMed"&gt;一般 &lt;/li&gt;
+               &lt;li class="pwd-strength-box" id="pwdHi"&gt;安全 &lt;/li&gt;
+             &lt;/ul&gt;
+     &lt;/div&gt;
+</code></pre>                                            
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+			</div>
+			<div class="demo_content_list fn-left">
+				<div class="demo_content_listd1">
+					<ul>
+						<li class="demo_content_listd1li1">
+							<a href="#" class="demo_content_listd1li1a1">
+								css
+							</a>
+							<ul class="demo_content_listd1li1u1">
+								<li>
+                                    <a href="#1">
+									一、浅谈css 关于图片垂直水平居中问题  /×    兼容所有浏览器    ×/
+                                    </a>
+								</li>
+								<li>
+                                    <a href="#2">
+									二、纯css实现圆角
+                                    </a>
+								</li>
+								<li>
+                                    <a href="#3">
+									三、css解决ie6 背景透明文字不透明
+                                    </a>
+								</li>
+								<li>
+                                    <a href="#4">
+									四、解决ie6下的透明图片问题
+                                    </a>
+								</li>
+								<li>
+                                    <a href="#5">
+									五、解决ie6下透明背景的问题
+                                    </a>
+								</li>
+								<li>
+                                    <a href="#6">
+									六、关于100%解决方案
+                                    </a>
+								</li>
+                                <li>
+                                    <a href="#7">
+                                                                                                   七、如何加载不同的css样式
+                                     </a>                                                                                                       
+                                </li>
+                                <li>
+                                    <a href="#8">
+                                                                                                    八、调整字和字符间距
+                                     </a>                                                               
+                                </li>
+                                <li>
+                                    <a href="#9">
+                                                                                                    九、超出文本用省略号显示
+                                     </a>                                                               
+                                </li>
+                                <li>
+                                    <a href="#10">
+                                                                                                    十、解决ie6 下position:fixed的问题
+                                    </a>                                                               
+                                </li>
+                                <li>
+                                    <a href="#11">
+                                                                                                     十一、CSS浏览器兼容问题整理
+                                    </a>                                                                 
+                                </li>								
+							</ul>
+						</li>
+						<li class="demo_content_listd1li1">
+							<a href="#" class="demo_content_listd1li1a1">
+								js
+							</a>
+							<ul class="demo_content_listd1li1u1">
+								<li>
+                                    <a href="#12">
+									一、关于jQuery的轮播插件sochange的参数解释
+								    </a>
+                                </li>
+                                <li>
+                                    <a href="#13">
+                                                                                                   二、走马灯无缝滚动
+                                   </a>                                                                    
+                                </li>
+                                <li>
+                                    <a href="#14">
+                                                                                                   三、一个内容上下循环滚动效果（如：以一个li为单位）
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#15">
+                                                                                                   四、简单的弹出框
+                                    </a>                                                                
+                                </li>
+                                <li>
+                                    <a href="#16">
+                                                                                                   五、收藏、刷新、设为首页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#17">
+                                                                                                   六、解决include上方的空格
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#18">
+                                                                                                   七、设置input框的默认文字 小插件smartfocus
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#19">
+                                                                                                   八、复制粘贴文字
+                                     </a>                                                              
+                                </li>
+                                <li>
+                                    <a href="#20">
+                                                                                                   九、如何实现窗口全屏
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#21">
+                                                                                                   十、最大最小高度设置
+                                    </a>
+                                </li>
+								<li>
+                                    <a href="#22">
+									十一、js中常用元素属性scrollLeft,scrollWidth,clientWidth,offsetWidth的解释
+								    </a>
+                                </li>
+								<li>
+                                    <a href="#23">
+									十二、自定义表单——美化你的文件载入框 
+								    </a>
+                                </li>
+								<li>
+                                    <a href="#24">
+                                                                                                    十三、控制密码复杂度小例子 
+                                    </a>
+                                </li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="fn-clear"></div>
+		</div>
+		<div class="demo_footer">
+			<div class="demo_footerin">
+				<div class="demo_footeriner fn-clear">
+					内容经网上搜集和自己拙笔及整理而来，如有错误等欢迎指点指正<br />
+					邮箱：657299734@qq.com
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/rainbow.js"></script>
+	<script src="js/language/generic.js"></script>
+	<script src="js/language/html.js"></script>
+	<script src="js/language/css.js"></script>
+    <script src="js/language/javascript.js"></script>
+    <script>
+    
+    	$(".demo_content_listd1li1u1 li").hover(
+    		function(){
+    			$(this).css("background","url('images/li_bg.png') no-repeat left 6px #fff");
+    		},
+    		function(){
+    			$(this).css("background","url('images/li_bg.png') no-repeat left 5px transparent");
+    		}
+    	)
+    	window.onscroll=function(){
+        	if(document.body.scrollTop||document.documentElement.scrollTop>125) {
+        		$(".demo_content_list").css("top","-35px");				  
+        	}else{
+        		$(".demo_content_list").css("top","100px");
+        	} 
+        }
+    	$(function(){
+    		function getRandom(n){return Math.floor(Math.random()*n+1)}
+			$("body").addClass( "aaa_" + getRandom(3));
+		});
+    </script>
+</html>

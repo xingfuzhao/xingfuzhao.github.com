@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+/* 
+	@名称: base
+	@功能: 重设浏览器默认样式
+*/
+
+/* 防止用户自定义背景颜色对网页的影响 */
+html{
+	color:#000;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body,button,input,select,textarea,a{
+	font:12px/1.5 宋体,arial,\5b8b\4f53;
+}
+
+input,select,textarea{
+	font-size:100%;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th{
+	text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img{
+	border:0;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+	display:block;
+}
+
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+	border:0;font-variant:normal;
+}
+
+/* 一致的 del 样式 */
+del {
+	text-decoration:line-through;
+}
+
+address,caption,cite,code,dfn,em,th,var {
+	font-style:normal;
+	font-weight:500;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+	list-style:none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,th {
+	text-align:left;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:500;
+}
+
+q:before,q:after {
+	content:'';
+}
+
+/* 统一上标和下标 */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+	text-decoration:underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+	text-decoration:none;
+}
+
+/* 清理浮动 */
+.fn-clear:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.fn-clear {
+	zoom:1; /* for IE6 IE7 */
+}
+
+/* 隐藏, 通常用来与 JS 配合 */
+body .fn-hide {
+	display:none;
+}
+
+/* 设置内联, 减少浮动带来的bug */
+.fn-left,.fn-right {
+	display:inline;
+}
+.fn-left {
+	float:left;
+}
+.fn-right {
+	float:right;
+}
+
+#greybackground {
+    background: none repeat scroll 0 0 #000000;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* tag for element start ***** */
+.tags_show{
+	margin-top: 2px;
+    width: 442px;
+	background-color:#fff;
+	border: 1px solid #DDDDDD;
+	color: #000000;
+	z-index:99999;
+}
+.tags_show ul{
+	/*float:left;*/
+	width: 442px;
+	z-index:9999;
+}
+.tags_show p{
+	font-weight:bold;
+	font-size:14px;
+}
+.tag_bg{
+	background-color:#f6f3ec;
+}
+.tags_show li{
+	height:26px;
+	line-height:26px;
+	float:left;
+	padding-right:6px;
+	display:inline;
+	white-space: nowrap;
+}
+.tags_show li span{
+	float:left;
+	_float:none;
+	padding:0px 3px 0 3px;
+	_padding:0px 0 0 0;
+}
+.tag_close{
+	float: right;
+    font-size: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.tag_fun{
+	border-top: 1px solid #EEEEEE;
+    height: 29px;
+    margin: 4px 0 0 2px;
+    width: 436px;
+}
+.tag_ok{
+    margin: 4px 0 0 2px;
+    width: 48px;
+    float:right;
+}
+.tag_reset{
+    margin: 4px 2px 0 2px;
+    width: 48px;
+    float:right;
+}
+
+.tag_yes{
+    margin: 4px 0 0 2px;
+    width: 48px;
+    float:right;
+}
+.tag_refuse{
+    margin: 4px 2px 0 2px;
+    width: 48px;
+    float:right;
+}
+.tag_yes input{
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_refuse input{
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_refuse input{
+	background: url("../images/refuse.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_yes input{
+	background: url("../images/yes.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_ok input{
+	background: url("../images/saved.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_reset input{
+	background: url("../images/reset_btn.gif") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 23px;
+    width: 48px;
+    cursor:pointer;
+}
+.tag_title {
+	width:442px;
+	height:36px;
+	line-height: 36px;
+	/*background:url("../images/20120716/tag_title_ojia.jpg") no-repeat left top;*/
+	background-color:#604004;
+	overflow:hidden;	
+    color: #fff;
+    font-size: 14px;    
+    text-indent: 6px;
+    z-index:9999;
+    /*
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: none repeat scroll 0 0 #999999;
+    */
+}
+.tag_tips{
+	float:left;
+}
+/* tag for element end ***** */
+
+/** input file start */
+.File_btn{
+	position: relative;
+	display:block;
+	width: 62px;
+	height: 23px;
+	background: url("../images/file_btn.jpg") no-repeat left top;
+	cursor: pointer;
+	margin:0 auto;
+	overflow: hidden;
+	z-index:99;
+}
+
+.File_btn .input_file {
+	position: absolute;
+	width: 62px;
+	height: 23px;
+	top:0;
+	left:0;
+	_left:-5px;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0); 
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	z-index:999;
+	cursor: pointer;
+}
+#Upload_file_iframe{
+	display:none;
+}
+
+.File_box_form{
+	position: relative;
+	display:block;
+	width: 72px;
+	height: 23px;
+	background: url("../images/file_btn1.jpg") no-repeat left top;
+	cursor: pointer;
+	overflow: hidden;
+	z-index:99;
+}
+
+.File_box_form .box_file {
+	position: absolute;
+	width: 62px;
+	height: 23px;
+	top:0;
+	left:0;
+	_left:-5px;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0); 
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+	z-index:999;
+	cursor: pointer;
+}
+.file_span {
+	display:inline-block;
+	width:200px;
+	height:23px;
+	border:1px solid #ccc;
+	margin-right:5px;
+	margin-left:5px;
+	overflow:hidden;
+}
+
+
+/**  input file end */
+
+/**              弹框样式设置                                                */
+
+#greybackground {
+	background: none repeat scroll 0 0 #000;
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.fv_add_inputbox {
+	width:459px;
+	height:325px;
+    position: absolute;
+    z-index: 99999;
+    overflow:hidden;
+    /*display:none;*/
+    color:#000;
+}
+.fv_add_inputboxd1 {
+	width:459px;
+	height:39px;
+	overflow:hidden;
+}
+.fv_add_inputboxd1 img {
+	position:relative;
+	display:block;
+	width:459px;
+	height:39px;
+}
+.fv_add_inputboxd1 a {
+	position:relative;
+	display:block;
+	width:15px;
+	height:15px;
+	left:426px;
+	top:-27px;
+	overflow:hidden;
+}
+.fv_add_inputboxd1 a:hover {
+	text-decoration:none;
+}
+.fv_add_inputboxd2 {
+	width:359px;
+	padding:20px;
+	padding-left:80px;
+	background:url("../images/20120822/fv_add_inputboxd2.gif") repeat-y left top;
+	margin:0 auto;
+	overflow:hidden;
+}
+.fv_add_inputboxd2_in {
+	width:150px;
+	height:150px;
+	margin-top:20px;
+	background-color:#ccc;
+	margin-left:70px;
+	overflow:hidden;
+}
+.fv_add_inputboxd2_in img {
+	display:block;
+	width:150px;
+	height:150px;
+	border:none;
+}
+.fv_add_inputboxd2_ipt1 {
+	width:72px;
+	height:23px;
+	background:url("../images/20120822/fv_add_inputboxd2_ipt1.jpg") no-repeat left top;
+	border:none;
+	margin-left:105px;
+	margin-top:10px;
+	cursor:pointer;
+}
+.fv_add_inputboxd3 {
+	width:459px;
+	height:19px;
+	overflow:hidden;
+}
+.category_addstyle span {
+	display:inline-block;
+	padding:3px;
+	vertical-align:top;
+}
+.category_addstyle a {
+	display:inline-block;
+	padding:3px;
+	color:#000;
+	font-size:14px;
+	font-weight:bold;
+	overflow:hidden;
+}
+.category_addstyle  a:hover {
+	background-color:#000;
+	color:#fff;
+}
+.category_addstyle a.click {
+	background-color:#000;
+	color:#fff;
+}
+	
