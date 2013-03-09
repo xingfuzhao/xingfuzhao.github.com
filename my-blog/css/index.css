@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 body {
 	font-size:12px;
@@ -8,6 +8,10 @@ body {
 	padding:0px;
 	background-color:#f6f7fb;
     background:url("../images/lift_bg_0.jpg") repeat left top;
+    background-attachment:fixed;
+}
+.aaa_4 {
+     background:url("../images/lift_bg_4.jpg") repeat left top;
     background-attachment:fixed;
 }
 .aaa_3 {
@@ -143,7 +147,6 @@ body {
 	margin-top:42px;
     position:fixed;
     top:100px;
-    right:160px;
     border-radius:10px;
 	overflow:hidden;
 }

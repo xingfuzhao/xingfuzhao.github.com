@@ -1771,7 +1771,7 @@ tabindex="4" onkeyup="checkPassword(this.value);" /&gt;
                     <div class="fn-clear"></div>
                 </div>
 			</div>
-			<div class="demo_content_list fn-left">
+			<div class="demo_content_list fn-left" id="menu-fixed">
 				<div class="demo_content_listd1">
 					<ul>
 						<li class="demo_content_listd1li1">
@@ -1948,5 +1948,13 @@ tabindex="4" onkeyup="checkPassword(this.value);" /&gt;
     		function getRandom(n){return Math.floor(Math.random()*n+1)}
 			$("body").addClass( "aaa_" + getRandom(3));
 		});
+    	//菜单位置定位
+    	function divFixed() {
+    		var rSposi=document.getElementById("menu-fixed");
+    		var menu_fixwid1=document.body.offsetWidth-1000;
+    		var menu_fixwid2=((menu_fixwid1/2)+1000-170)+"px";
+    		rSposi.style.left=menu_fixwid2;
+    	}
+    	divFixed();
     </script>
 </html>
