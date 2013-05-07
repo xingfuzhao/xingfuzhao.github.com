@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>become from here</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/become.css" />
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/become_tools.js"></script>
+    <script type="text/javascript" src="js/become.js"></script>
+</head>
+<body>
+	<!--          heaader及个人中心相关页面             -->
+    <div id="header">
+        <div class="logo"><img src="images/logo.gif" alt="" /></div>
+        <div class="member">
+            <a href="#" class="user">个人中心</a>
+            <div class="member_ul">
+                <ul>
+                    <li>
+                        <a href="#">我的博客1</a>
+                    </li>
+                    <li>
+                        <a href="#">我的博客2</a>
+                    </li>
+                    <li>
+                        <a href="#">我的博客3</a>
+                    </li>
+                    <li>
+                        <a href="#">我的博客4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="login">
+            <a href="#">登录</a>
+        </div>
+    </div>
+    
+    <!--           登录弹出框相关页面            -->
+    <div id="login">
+        <h2><img src="images/close.png" alt="" class="close" />网站登录</h2>
+        <div class="user">账号： <input type="text" name="user" class="text" /></div>
+        <div class="pass">密码： <input type="password" name="pass" class="text" /></div>
+        <div class="button"><input type="button" class="submit" value="" /></div>
+        <div class="other"><a href="#">注册新用户</a> | <a href="#">忘记密码？</a></div>
+    </div>
+    <div id="screen"></div>
+    
+    <!--       滑动菜单         -->
+    <div id="menu">
+    	<ul class="about">
+    		<li><a href="#"></a></li>
+    		<li><a href="#"></a></li>
+    		<li><a href="#"></a></li>
+    		<li><a href="#"></a></li>
+    		<li><a href="#"></a></li>
+    		<li><a href="#"></a></li>
+    	</ul>
+    	<ul class="ulone">
+    		<li>首页</li>
+    		<li>项目案例</li>
+    		<li>联系我们</li>
+    		<li>关于我们</li>
+    		<li>我的blog</li>
+    		<li>我的样式</li>
+    	</ul>
+    	<div class="nav_bg">
+	    	<ul class="ultwo">
+	    		<li>首页</li>
+	    		<li>项目案例</li>
+	    		<li>联系我们</li>
+	    		<li>关于我们</li>
+	    		<li>我的blog</li>
+	    		<li>我的样式</li>
+	    	</ul>
+    	</div>
+    </div>
+    
+    <!--        注册表单验证 , autocomplete功能小试 年月日 备注 回答问题      -->
+    <div id="reg">
+    	<h2>用户注册</h2>
+		<form>
+			<dl>
+				<dd>
+					<label>用&nbsp;户&nbsp;名：</label>
+					<input type="text" name="user" class="text" value="用户名" />
+					<span class="info user_info">请输入用户名,2~20位，由字母、数字和下划线组成！</span>
+					<span class="error user_error">输入不合法，请重新输入</span>
+					<span class="succ user_succ">可用</span>
+				</dd>
+				<dd>
+					<label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+					<input type="password" name="pass" class="text" value="" />
+					<span class="info pass_info">
+						<p>
+							安全级别：<strong class="s s1">■</strong> <strong class="s s2">■</strong> <strong class="s s3">■</strong> <strong class="s s4" style="font-weight:normal"></strong>
+						</p>		
+						<p>
+							<strong class="q1">◦</strong>  6-20个字符
+						</p>
+						<p>
+							<strong class="q2">◦</strong>  只能包含大小写字母、数字和非空字符
+						</p>
+						<p>
+							<strong class="q3">◦</strong>  大、小写字母、数字、非空字符，2种以上
+						</p>			
+					</span>
+					<span class="error pass_error">输入不合法，请重新输入！</span>
+					<span class="succ pass_succ">可用</span>
+				</dd>
+				<dd>
+					<label>密码确认：</label>
+					<input type="password" name="notpass" class="text" value="" />
+					<span class="info notpass_info">请输入确认密码</span>
+					<span class="error notpass_error">输入不一致，请重新输入！</span>
+					<span class="succ notpass_succ">可用</span>
+				</dd>
+				<dd>
+					<label>注册邮箱：</label>
+					<input type="text" name="email" class="text" value="" autocomplete="off" />
+					<span class="info email_info">请输入注册邮箱</span>
+					<span class="error email_error">输入出错请重新输入</span>
+					<span class="succ email_succ">可用</span>
+					<ul class="ul_email">
+						<li><span></span>@qq.com</li>
+						<li><span></span>@163.com</li>
+						<li><span></span>@sohu.com</li>
+						<li><span></span>@sina.com</li>
+						<li><span></span>@sina.com.cn</li>
+					</ul>
+				</dd>
+				<dd>
+					<label>回答问题：</label>
+					<select class="anssel">
+						<option value="0">--请回答--</option>
+						<option value="1">--最爱吃水果是什么--</option>
+						<option value="2">--出生地是哪--</option>
+						<option value="3">--最喜欢的电视--</option>
+						<option value="4">--最尊敬人是谁--</option>
+					</select>
+				</dd>
+				<dd>
+					<label>回&nbsp;&nbsp;&nbsp;&nbsp;答：</label>
+					<input type="text" name="ans" class="text" value="" />
+				</dd>
+				<dd class="dd_birthday">
+					<label>出生日期：</label>
+					<select>
+						<option value="0">--年--</option>
+					</select> 年
+					<select>
+						<option value="0">--月--</option>
+					</select> 月
+					<select>
+						<option value="0">--日--</option>
+					</select> 日
+				</dd>
+				<dd>
+					<label class="beizhu">备&nbsp;&nbsp;&nbsp;&nbsp;注：</label>
+					<textarea class="texta"></textarea>
+				</dd>
+				<dd class="ps ps1">
+					还可以输入 <strong>200</strong> 字！
+				</dd>
+				<dd class="ps ps2">
+					已超过 <strong style="color:red;"></strong> 字！<span>清尾</span>
+				</dd>
+				<dd>
+					<input type="button" name="sub" class="sub" value="" />
+				</dd>
+			</dl>
+		</form>    
+    </div>
+    
+    <div id="cop">
+    	<h2>
+    		找找看
+    	</h2>
+    	<div class="search">
+    		搜索：<input type="text" name="text" value="" />
+    	</div>
+    	<div class="ask">
+    		已查找关键字：<br />
+    		<!--  <a href="javascript:void(0);">我们</a>-->  <a href="javascript:void(0);">你们</a> <a href="javascript:void(0);">他们</a>
+    	</div>
+    	<p>
+    		我们都是生活在这个世界上的，我们，你们，他们，它们，组成了这个世界！世界是美好的，未来是光明的！开拓视野，创造美好未来！
+    		看世界繁华无数，享世界无尽奢华！
+    		生活中有很多美好！
+    		美好中有很多期待！
+    		我们都是生活在世界上的，我们，你们，他们，它们，组成了这个世界！世界是美好的，未来是光明的！开拓视野，创造美好未来！
+    		看世界繁华无数，享世界无尽奢华！
+    		生活中有很多美好！
+    		美好中有很多期待！
+    		我们都是生活在这个世界上的，我们，你们，他们，它们，组成了这个世界！世界是美好的，未来是光明的！开拓视野，创造美好未来！
+    		看世界繁华无数，享世界无尽奢华！
+    		生活中有很多美好！
+    		美好中有很多期待！
+    		我们都是生活在这个世界上的，我们，你们，他们，它们，组成了这个世界！世界是美好的，未来是光明的！开拓视野，创造美好未来！
+    		看世界繁华无数，享世界无尽奢华！
+    		生活中有很多美好！
+    		美好中有很多期待！
+    		我们都是生活在这个世界上的，我们，你们，他们，它们，组成了这个世界！世界是美好的，未来是光明的！开拓视野，创造美好未来！
+    		看世界繁华无数，享世界无尽奢华！
+    		生活中有很多美好！
+    		美好中有很多期待！
+    		
+    	</p>
+    	
+    </div>
+    
+</body>
+</html>
