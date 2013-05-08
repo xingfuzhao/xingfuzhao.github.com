@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+#chart {
+	position:relative;
+	width:1000px;
+	height:155px;
+	margin:20px auto;
+	/* margin:20px 10px 30px 60px; */
+}
+.chartcont {
+	position:relative;
+	width:999px;
+	height:100%;
+	border-left:1px solid #666;
+	border-bottom:1px solid #666;
+}
+.chartcont ul {
+	clear:both;
+	width:999;
+	height:29px;
+	border-top:1px solid #e3e3e3;
+}
+.chartcont ul li {
+	/* width:88px; */
+	/* height:29px; */
+	border-right:1px solid #e3e3e3;
+	float:left;
+}
+.chart_num {
+	position:absolute;
+	left:-60px;
+	top:-15px;
+	width:60px;
+	height:100%;
+	/* background:red; */
+}
+.chart_num ul li {
+	width:60px;
+	/* height:29px;
+	line-height:29px; */
+	text-align:center;
+	color:#666;
+	font-size:12px;
+	font-family:"Arial";
+	float:left;
+}
+.chart_Histogram {
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	/* background:blue; */
+}
+.chart_Histogram ul {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.chart_Histogram ul li {
+	position:relative;
+	float:left;
+	height:100%;
+	/* width:88px; */
+}
+.chart_Histogram ul li a {
+	position: absolute;
+	bottom: 0;
+	/* right: 33.5%; */
+	display: block;
+	/* width: 25%; */
+	/* height:20px;
+	background:red; */
+	font-size: 0;
+	line-height: 0;
+}
+.chart_Histogram ul li span {
+	position: absolute;
+	bottom: -20px;
+	left: 0px;
+	white-space: nowrap;
+	display: inline-block;
+	width: 100%;
+	font-size: 12px;
+	text-align:center;
+	overflow: hidden;
+}
+
+
+
+
+
+
